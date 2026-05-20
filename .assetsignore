@@ -1,0 +1,9 @@
+worker.js
+wrangler.jsonc
+schema.sql
+DEPLOYMENT.md
+.gitignore
+.git
+.wrangler
+functions
+node_modules

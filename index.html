@@ -1,0 +1,2744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Primary Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Rope Technical Services LLC | Rope Access & Facade Cleaning Dubai UAE</title>
+    <meta name="description" content="UAE's leading IRATA-certified rope access and facade maintenance specialists. Facade cleaning, glass replacement, cladding works, and high-rise maintenance across Dubai and the UAE.">
+    <meta name="keywords" content="rope access UAE, facade cleaning Dubai, IRATA certified, high rise maintenance UAE, facade cladding works, glass cleaning Dubai, bird spike installation UAE">
+    <meta name="author" content="Sky Rope Technical Services LLC">
+    <link rel="canonical" href="https://skyropetechnical.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sky Rope Technical Services LLC | Rope Access & Facade Cleaning UAE">
+    <meta property="og:description" content="IRATA-certified rope access specialists for facade cleaning, maintenance, and high-rise works across UAE and Qatar.">
+    <meta property="og:image" content="https://skyropetechnical.com/uploads/facad_burjghaleefa.webp">
+    <meta property="og:url" content="https://skyropetechnical.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sky Rope Technical Services | Rope Access Dubai UAE">
+    <meta name="twitter:description" content="IRATA-certified rope access and facade maintenance. Access the inaccessible.">
+    <meta name="twitter:image" content="https://skyropetechnical.com/uploads/facad_burjghaleefa.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="uploads/favicon.ico">
+    <link rel="icon" type="image/webp" href="uploads/skyrope-logo.webp">
+    <link rel="apple-touch-icon" href="uploads/skyrope-logo.webp">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* =====================================================
+           DESIGN TOKENS
+           ===================================================== */
+        :root {
+            --color-primary: #009a8e;
+            --color-primary-dark: #007a70;
+            --color-primary-glow: rgba(0, 154, 142, 0.15);
+            --color-dark: #272627;
+            --color-dark-2: #1a1a1a;
+            --color-dark-card: #1e1e1e;
+            --color-white: #ffffff;
+            --color-off-white: #f7f8f9;
+            --color-accent-blue: #2965b0;
+            --color-accent-orange: #ff9868;
+            --color-accent-gold: #bf961a;
+            --color-text-light: #a8b2bd;
+            --color-text-dark: #3a3a3a;
+            --color-border: rgba(0, 154, 142, 0.2);
+
+            --font-display: 'Barlow Condensed', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-accent: 'Space Grotesk', sans-serif;
+
+            --container: 1280px;
+            --radius-card: 8px;
+            --radius-btn: 4px;
+        }
+
+        /* =====================================================
+           RESET / BASE
+           ===================================================== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            color: var(--color-text-dark);
+            background: var(--color-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        ul { list-style: none; }
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; }
+
+        /* =====================================================
+           LAYOUT HELPERS
+           ===================================================== */
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+        .section { padding: 100px 0; position: relative; }
+        .section--dark { background: var(--color-dark); color: var(--color-white); }
+        .section--dark-2 { background: var(--color-dark-2); color: var(--color-white); }
+        .section--light { background: var(--color-off-white); }
+
+        .dot-grid {
+            background-image: radial-gradient(rgba(0,154,142,0.08) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-accent);
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 28px;
+        }
+        .section-label::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 50%;
+            width: 20px; height: 1px;
+            background: var(--color-primary);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            margin-bottom: 20px;
+            text-wrap: balance;
+        }
+        .section-title--dark { color: var(--color-white); }
+        .section-subtitle {
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin-bottom: 64px;
+            color: var(--color-text-dark);
+        }
+        .section--dark .section-subtitle, .section--dark-2 .section-subtitle { color: var(--color-text-light); }
+
+        .section-head { margin-bottom: 56px; }
+        .section-head--center { text-align: center; }
+        .section-head--center .section-subtitle { margin-left: auto; margin-right: auto; }
+        .section-head--center .section-label::before { display: none; }
+        .section-head--center .section-label { padding-left: 0; }
+
+        /* =====================================================
+           BUTTONS
+           ===================================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 26px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: var(--radius-btn);
+            transition: all 0.25s ease;
+            min-height: 48px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            font-family: var(--font-body);
+            letter-spacing: 0.01em;
+        }
+        .btn--primary { background: var(--color-primary); color: var(--color-white); }
+        .btn--primary:hover { background: var(--color-primary-dark); box-shadow: 0 0 20px rgba(0,154,142,0.4); transform: translateY(-1px); }
+        .btn--outline { background: transparent; color: var(--color-primary); border: 1px solid var(--color-primary); }
+        .btn--outline:hover { background: var(--color-primary); color: var(--color-white); box-shadow: 0 0 20px rgba(0,154,142,0.4); }
+        .btn--outline-light { background: transparent; color: var(--color-white); border: 1px solid var(--color-white); }
+        .btn--outline-light:hover { background: var(--color-white); color: var(--color-dark); }
+        .btn--block { width: 100%; }
+        .btn--whatsapp { background: #25D366; color: var(--color-white); }
+        .btn--whatsapp:hover { background: #1da851; box-shadow: 0 0 20px rgba(37,211,102,0.4); }
+
+        /* =====================================================
+           TOP BAR
+           ===================================================== */
+        .topbar {
+            background: var(--color-dark-2);
+            color: var(--color-text-light);
+            font-size: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .topbar__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .topbar i { color: var(--color-primary); margin-right: 6px; }
+        .topbar__contact { display: flex; gap: 18px; flex-wrap: wrap; }
+        .topbar__contact a:hover { color: var(--color-primary); }
+        .topbar__right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+
+        /* ----- Switchers (region + language) ----- */
+        .switcher { position: relative; }
+        .switcher__toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--color-text-light);
+            font-size: 12px;
+            font-family: var(--font-body);
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: color 0.2s ease, background 0.2s ease;
+            cursor: pointer;
+            background: transparent;
+        }
+        .switcher__toggle:hover { color: var(--color-primary); background: rgba(255,255,255,0.04); }
+        .switcher__toggle i.fa-chevron-down { font-size: 9px; color: inherit; margin: 0 0 0 2px; transition: transform 0.2s ease; }
+        .switcher.is-open .switcher__toggle i.fa-chevron-down { transform: rotate(180deg); }
+        .switcher__flag {
+            display: inline-flex;
+            width: 16px; height: 12px;
+            border-radius: 2px;
+            overflow: hidden;
+            background: #333;
+            margin-right: 2px;
+        }
+        .switcher__flag svg { width: 100%; height: 100%; display: block; }
+        .switcher__menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--color-dark);
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            min-width: 180px;
+            padding: 6px;
+            opacity: 0;
+            transform: translateY(-6px);
+            pointer-events: none;
+            transition: all 0.2s ease;
+            z-index: 110;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .switcher.is-open .switcher__menu {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .switcher__item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            color: var(--color-white);
+            font-size: 13px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.15s ease;
+            width: 100%;
+            text-align: start;
+            background: transparent;
+            border: none;
+            font-family: var(--font-body);
+        }
+        .switcher__item:hover { background: rgba(0,154,142,0.15); color: var(--color-primary); }
+        .switcher__item.is-current { background: rgba(0,154,142,0.18); color: var(--color-primary); }
+        .switcher__item-sub { font-size: 11px; color: var(--color-text-light); margin-inline-start: auto; }
+
+        /* =====================================================
+           NAV
+           ===================================================== */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--color-dark);
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+        }
+        .nav.is-scrolled {
+            background: rgba(39, 38, 39, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 14px 0;
+        }
+        .nav__logo img { max-height: 44px; width: auto; display: block; border-radius: 4px; padding: 4px 8px; background: var(--color-white); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+        .nav__links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav__links a {
+            color: var(--color-white);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 6px 0;
+            transition: color 0.2s ease;
+        }
+        .nav__links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--color-primary);
+            transition: width 0.25s ease;
+        }
+        .nav__links a:hover, .nav__links a.is-active {
+            color: var(--color-primary);
+        }
+        .nav__links a:hover::after, .nav__links a.is-active::after { width: 100%; }
+
+        .nav__cta { display: flex; align-items: center; gap: 12px; }
+        .nav__hamburger {
+            display: none;
+            width: 44px; height: 44px;
+            color: var(--color-white);
+            font-size: 1.4rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0; right: 0;
+            width: 320px;
+            max-width: 85vw;
+            height: 100vh;
+            background: var(--color-dark-2);
+            z-index: 200;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 28px 28px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+        }
+        .mobile-menu.is-open { transform: translateX(0); }
+        .mobile-menu__head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .mobile-menu__close {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .mobile-menu__links { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+        .mobile-menu__links a {
+            color: var(--color-white);
+            padding: 14px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .mobile-menu__links a:hover { color: var(--color-primary); }
+        .mobile-menu .btn { margin-top: 16px; }
+        .mobile-menu-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 199;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.is-open { opacity: 1; pointer-events: auto; }
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--color-white);
+            background-image:
+                linear-gradient(135deg, rgba(27,26,27,0.88) 0%, rgba(0,154,142,0.35) 100%),
+                url('uploads/facad_burjghaleefa.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(0,154,142,0.12) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        .hero__inner {
+            position: relative;
+            z-index: 2;
+            padding: 140px 0 200px;
+            max-width: 820px;
+        }
+        .hero__label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-accent);
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: 100px;
+            background: rgba(0,154,142,0.08);
+            backdrop-filter: blur(8px);
+            margin-bottom: 28px;
+        }
+        .hero__label i { color: var(--color-primary); }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.95;
+            margin-bottom: 28px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 .accent { color: var(--color-primary); }
+        .hero__subtext {
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            color: var(--color-text-light);
+            max-width: 580px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .hero__buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        .hero__stats {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            background: rgba(26,26,26,0.85);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--color-border);
+            z-index: 2;
+        }
+        .hero__stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            padding: 28px 0;
+        }
+        .stat {
+            text-align: center;
+            color: var(--color-white);
+            position: relative;
+        }
+        .stat + .stat::before {
+            content: '';
+            position: absolute;
+            left: -12px; top: 50%;
+            transform: translateY(-50%);
+            width: 1px; height: 60%;
+            background: rgba(255,255,255,0.1);
+        }
+        .stat__value {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+        .stat__label {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            font-family: var(--font-accent);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            left: 50%; bottom: 130px;
+            transform: translateX(-50%);
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            animation: bounce 2s infinite;
+            z-index: 2;
+            display: none; /* hide on mobile when stats are tall */
+        }
+        @media (min-width: 768px) { .scroll-indicator { display: block; } }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            50% { transform: translateX(-50%) translateY(10px); opacity: 0.5; }
+        }
+
+        /* =====================================================
+           ABOUT
+           ===================================================== */
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .about__text p { margin-bottom: 18px; color: #555; font-size: 1rem; line-height: 1.75; }
+        .about__trust {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 28px 0;
+        }
+        .about__trust li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            color: var(--color-text-dark);
+        }
+        .about__trust i {
+            color: var(--color-primary);
+            background: var(--color-primary-glow);
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .about__image-wrap {
+            position: relative;
+            border-radius: var(--radius-card);
+            overflow: visible;
+        }
+        .about__image-wrap img {
+            border-radius: var(--radius-card);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            width: 100%;
+            height: auto;
+        }
+        .about__badge {
+            position: absolute;
+            bottom: -24px; left: -24px;
+            background: rgba(26,26,26,0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--color-primary);
+            border-radius: var(--radius-card);
+            padding: 18px 24px;
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            max-width: 280px;
+            box-shadow: 0 12px 40px rgba(0,154,142,0.2);
+        }
+        .about__badge-num {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 2rem;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+        .about__badge-text {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.3;
+        }
+
+        /* =====================================================
+           SERVICES
+           ===================================================== */
+        .services {
+            position: relative;
+        }
+        .services::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(0,154,142,0.08) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+        .service-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(0,154,142,0.2);
+            border-radius: var(--radius-card);
+            padding: 32px 26px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            min-height: 280px;
+        }
+        .service-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 24px rgba(0,154,142,0.2);
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.06);
+        }
+        .service-card__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: var(--color-primary-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+        }
+        .service-card h3 {
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.35rem;
+            line-height: 1.2;
+        }
+        .service-card p {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            line-height: 1.55;
+            flex-grow: 1;
+        }
+        .service-card a {
+            color: var(--color-primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s ease;
+        }
+        .service-card a:hover { gap: 12px; }
+
+        /* =====================================================
+           WHY CHOOSE US
+           ===================================================== */
+        .why__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .why-item {
+            padding: 8px 0;
+        }
+        .why-item__icon {
+            width: 56px; height: 56px;
+            border-radius: 12px;
+            background: var(--color-primary-glow);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+        .why-item h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+        .why-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           SAFETY
+           ===================================================== */
+        .safety__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .safety__text p {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .safety__badges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .badge-tile {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-card);
+            padding: 28px 22px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+        .badge-tile:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 24px rgba(0,154,142,0.2);
+        }
+        .badge-tile__icon {
+            width: 44px; height: 44px;
+            background: var(--color-primary-glow);
+            color: var(--color-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .badge-tile h4 {
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        .badge-tile p {
+            color: var(--color-text-light);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* =====================================================
+           PROCESS
+           ===================================================== */
+        .process__steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        .process__steps::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 10%; right: 10%;
+            border-top: 2px dashed var(--color-primary);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .step__num {
+            width: 64px; height: 64px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: var(--color-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.5rem;
+            position: relative;
+            box-shadow: 0 8px 24px rgba(0,154,142,0.3);
+        }
+        .step__num i {
+            font-size: 1.4rem;
+        }
+        .step__counter {
+            position: absolute;
+            top: -8px; right: -8px;
+            background: var(--color-dark);
+            color: var(--color-white);
+            font-size: 0.7rem;
+            font-weight: 600;
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-accent);
+        }
+        .step h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+        .step p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* =====================================================
+           GALLERY
+           ===================================================== */
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 280px;
+            gap: 16px;
+        }
+        .gallery__item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-card);
+            cursor: pointer;
+            background: var(--color-dark-card);
+        }
+        .gallery__item:nth-child(1) { grid-row: span 2; }
+        .gallery__item:nth-child(4) { grid-row: span 2; }
+        .gallery__item:nth-child(5) { grid-column: span 2; }
+        .gallery__item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery__item:hover img { transform: scale(1.08); }
+        .gallery__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,154,142,0.0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .gallery__item:hover .gallery__overlay {
+            background: rgba(0,154,142,0.7);
+            opacity: 1;
+        }
+        .gallery__overlay i {
+            color: var(--color-white);
+            font-size: 2rem;
+            background: rgba(0,0,0,0.4);
+            width: 64px; height: 64px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .lightbox.is-open { display: flex; }
+        .lightbox__image {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+        }
+        .lightbox__btn {
+            position: absolute;
+            background: rgba(0,154,142,0.2);
+            color: var(--color-white);
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+        }
+        .lightbox__btn:hover { background: var(--color-primary); }
+        .lightbox__close { top: 24px; right: 24px; }
+        .lightbox__prev { left: 24px; top: 50%; transform: translateY(-50%); }
+        .lightbox__next { right: 24px; top: 50%; transform: translateY(-50%); }
+        .lightbox__counter {
+            position: absolute;
+            bottom: 24px; left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-white);
+            font-family: var(--font-accent);
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.4);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* =====================================================
+           TESTIMONIALS
+           ===================================================== */
+        .testimonials__viewport {
+            overflow: hidden;
+            position: relative;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .testimonials__track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-card {
+            min-width: 100%;
+            background: var(--color-white);
+            border-left: 4px solid var(--color-primary);
+            border-radius: var(--radius-card);
+            padding: 40px 36px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+            position: relative;
+            margin: 8px;
+            box-sizing: border-box;
+            min-width: calc(100% - 16px);
+        }
+        .testimonial-card__stars {
+            color: var(--color-accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        .testimonial-card__quote {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-text-dark);
+            margin-bottom: 20px;
+            font-style: italic;
+            position: relative;
+        }
+        .testimonial-card__quote::before {
+            content: '"';
+            position: absolute;
+            top: -30px; left: -10px;
+            font-size: 4rem;
+            color: var(--color-primary);
+            opacity: 0.15;
+            font-family: serif;
+        }
+        .testimonial-card__author {
+            font-weight: 600;
+            color: var(--color-dark);
+            font-size: 0.95rem;
+        }
+        .testimonial-card__author span {
+            color: #888;
+            font-weight: 400;
+        }
+        .testimonials__dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 32px;
+        }
+        .testimonials__dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .testimonials__dot.is-active {
+            background: var(--color-primary);
+            width: 32px;
+            border-radius: 6px;
+        }
+
+        /* =====================================================
+           COVERAGE
+           ===================================================== */
+        .coverage__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+        .coverage__text p {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin-bottom: 28px;
+        }
+        .coverage__badges {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .coverage-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--color-border);
+            border-radius: 100px;
+            color: var(--color-white);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .coverage-badge__flag { font-size: 1.2rem; }
+        .coverage__map {
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            min-height: 360px;
+        }
+        .coverage__map iframe {
+            width: 100%;
+            height: 360px;
+            border: 0;
+            display: block;
+        }
+
+        /* =====================================================
+           CONTACT
+           ===================================================== */
+        .contact__grid {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .contact__cards { display: flex; flex-direction: column; gap: 16px; }
+        .contact-card {
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            padding: 22px 24px;
+            display: flex;
+            gap: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.04);
+            align-items: flex-start;
+        }
+        .contact-card__icon {
+            width: 44px; height: 44px;
+            background: var(--color-primary-glow);
+            color: var(--color-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+        .contact-card__body h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: var(--color-dark);
+            font-weight: 600;
+        }
+        .contact-card__body p, .contact-card__body a {
+            color: #555;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            display: block;
+        }
+        .contact-card__body a:hover { color: var(--color-primary); }
+
+        .contact__form-wrap {
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            padding: 36px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-field { display: flex; flex-direction: column; gap: 6px; }
+        .form-field--full { grid-column: 1 / -1; }
+        .form-field label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-text-dark);
+        }
+        .form-field label .req { color: #d33; }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-btn);
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--color-text-dark);
+            background: var(--color-white);
+            transition: all 0.2s ease;
+            min-height: 44px;
+        }
+        .form-field textarea { resize: vertical; min-height: 120px; }
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(0,154,142,0.15);
+        }
+        .form-field.has-error input,
+        .form-field.has-error select,
+        .form-field.has-error textarea {
+            border-color: #d33;
+        }
+        .form-field__error {
+            color: #d33;
+            font-size: 0.8rem;
+            display: none;
+        }
+        .form-field.has-error .form-field__error { display: block; }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 24px;
+        }
+        .form-success.is-visible { display: block; }
+        .form-success i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            background: var(--color-primary-glow);
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-success h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+        .form-success p { color: #555; }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+        .footer {
+            background: var(--color-dark);
+            color: var(--color-text-light);
+            padding: 80px 0 0;
+        }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 56px;
+            padding-bottom: 56px;
+        }
+        .footer__brand img { max-height: 56px; margin-bottom: 20px; border-radius: 4px; padding: 6px 10px; background: var(--color-white); box-shadow: 0 6px 18px rgba(0,0,0,0.25); display: block; }
+        .footer__brand p {
+            margin-bottom: 24px;
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+        .footer__social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer__social a {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: rgba(0,154,142,0.1);
+            border: 1px solid var(--color-border);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .footer__social a:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        .footer h4 {
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer__list { display: flex; flex-direction: column; gap: 10px; }
+        .footer__list a {
+            color: var(--color-text-light);
+            font-size: 0.92rem;
+            transition: color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer__list a::before {
+            content: '›';
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        .footer__list a:hover { color: var(--color-primary); }
+        .footer__bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .footer__bottom .tagline { color: var(--color-primary); font-family: var(--font-accent); }
+
+        /* =====================================================
+           FLOATING BUTTONS
+           ===================================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px; right: 24px;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            z-index: 90;
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+            transition: transform 0.2s ease;
+            animation: pulse 2.4s infinite;
+        }
+        .whatsapp-float::after {
+            content: 'Chat on WhatsApp';
+            position: absolute;
+            right: 72px;
+            background: var(--color-dark);
+            color: var(--color-white);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-family: var(--font-body);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
+        .whatsapp-float:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6), 0 8px 24px rgba(37,211,102,0.4); }
+            70% { box-shadow: 0 0 0 18px rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 8px 24px rgba(37,211,102,0.4); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px; left: 24px;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--color-dark);
+            color: var(--color-primary);
+            border: 1px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            z-index: 90;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .back-to-top.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .back-to-top:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: 0 0 20px rgba(0,154,142,0.4);
+        }
+
+        /* =====================================================
+           SCROLL ANIMATIONS
+           ===================================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition-delay: calc(var(--i, 0) * 0.1s);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+        @media (max-width: 1199px) {
+            .services__grid { grid-template-columns: repeat(2, 1fr); }
+            .nav__links { gap: 22px; }
+        }
+        @media (max-width: 991px) {
+            .section { padding: 80px 0; }
+            .about__grid, .safety__grid, .coverage__grid, .contact__grid { grid-template-columns: 1fr; gap: 48px; }
+            .why__grid { grid-template-columns: repeat(2, 1fr); }
+            .process__steps { grid-template-columns: 1fr; gap: 32px; }
+            .process__steps::before { display: none; }
+            .step { display: grid; grid-template-columns: 80px 1fr; gap: 20px; text-align: left; align-items: flex-start; }
+            .step__num { margin: 0; }
+            .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px; }
+            .gallery__item:nth-child(1), .gallery__item:nth-child(4), .gallery__item:nth-child(5) { grid-row: auto; grid-column: auto; }
+            .form-grid { grid-template-columns: 1fr; }
+            .footer__grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 767px) {
+            .section { padding: 64px 0; }
+            .topbar__contact { gap: 12px; font-size: 11px; }
+            .nav__links, .nav__cta .btn { display: none; }
+            .nav__hamburger { display: flex; }
+            .hero { background-attachment: scroll; }
+            .hero__inner { padding: 80px 0 220px; }
+            .hero__buttons .btn { width: 100%; }
+            .hero__stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px 16px;
+                padding: 20px 0;
+            }
+            .stat + .stat::before { display: none; }
+            .services__grid { grid-template-columns: 1fr; }
+            .why__grid { grid-template-columns: 1fr; }
+            .safety__badges { grid-template-columns: 1fr; }
+            .gallery__grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+            .footer__grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer__bottom { flex-direction: column; text-align: center; }
+            .about__badge { left: 0; right: 0; margin: 0 auto; bottom: -28px; }
+            .section-title { font-size: 2rem; }
+            .hero h1 { font-size: 3rem; }
+            .whatsapp-float { width: 54px; height: 54px; font-size: 1.5rem; bottom: 16px; right: 16px; }
+            .back-to-top { width: 44px; height: 44px; bottom: 16px; left: 16px; }
+            .topbar__inner { justify-content: center; text-align: center; }
+            .lightbox__btn { width: 44px; height: 44px; font-size: 1.1rem; }
+        }
+
+        /* =====================================================
+           RTL (Arabic) ADJUSTMENTS
+           ===================================================== */
+        html[dir="rtl"] { font-family: 'Cairo', 'Inter', sans-serif; }
+        html[dir="rtl"] body { font-family: 'Cairo', sans-serif; }
+        html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4 {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+        html[dir="rtl"] .section-label { font-family: 'Cairo', sans-serif; padding-left: 0; padding-right: 28px; }
+        html[dir="rtl"] .section-label::before { left: auto; right: 0; }
+        html[dir="rtl"] .section-head--center .section-label { padding-right: 0; }
+        html[dir="rtl"] .hero__label { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+        html[dir="rtl"] .stat__label, html[dir="rtl"] .switcher__toggle { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+        html[dir="rtl"] .topbar i { margin-right: 0; margin-left: 6px; }
+        html[dir="rtl"] .about__trust i { /* keep */ }
+        html[dir="rtl"] .footer__list a::before { content: '‹'; }
+        html[dir="rtl"] .testimonial-card { border-left: none; border-right: 4px solid var(--color-primary); }
+        html[dir="rtl"] .testimonial-card__quote::before { left: auto; right: -10px; content: '"'; }
+        /* Flip directional arrows */
+        html[dir="rtl"] .fa-arrow-right { transform: scaleX(-1); }
+        html[dir="rtl"] .lightbox__prev { left: auto; right: 24px; }
+        html[dir="rtl"] .lightbox__next { right: auto; left: 24px; }
+        html[dir="rtl"] .lightbox__prev i { transform: scaleX(-1); }
+        html[dir="rtl"] .lightbox__next i { transform: scaleX(-1); }
+        html[dir="rtl"] .about__badge { left: auto; right: -24px; }
+        html[dir="rtl"] .whatsapp-float { right: auto; left: 24px; }
+        html[dir="rtl"] .whatsapp-float::after { right: auto; left: 72px; transform: translateX(-10px); }
+        html[dir="rtl"] .whatsapp-float:hover::after { transform: translateX(0); }
+        html[dir="rtl"] .back-to-top { left: auto; right: 24px; }
+        html[dir="rtl"] .mobile-menu { right: auto; left: 0; transform: translateX(-100%); box-shadow: 10px 0 40px rgba(0,0,0,0.5); }
+        html[dir="rtl"] .mobile-menu.is-open { transform: translateX(0); }
+        html[dir="rtl"] .switcher__menu { right: auto; left: 0; }
+        html[dir="rtl"] .scroll-indicator { left: 50%; }
+        html[dir="rtl"] .step__counter { right: auto; left: -8px; }
+        html[dir="rtl"] .nav__inner { /* flex auto-reverses */ }
+        html[dir="rtl"] body { line-height: 1.75; }
+        html[dir="rtl"] .hero h1 { line-height: 1.1; }
+        @media (max-width: 767px) {
+            html[dir="rtl"] .whatsapp-float { left: 16px; right: auto; }
+            html[dir="rtl"] .back-to-top { right: 16px; left: auto; }
+        }
+
+        /* ===== CLIENTS STRIP ===== */
+        .clients { background: var(--surface); border-top: 1px solid rgba(0,154,142,0.12); border-bottom: 1px solid rgba(0,154,142,0.12); padding: 48px 0; overflow: hidden; }
+        .clients__header { text-align: center; margin-bottom: 32px; }
+        .clients__label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary); font-weight: 600; }
+        .clients__track-wrap { overflow: hidden; position: relative; }
+        .clients__track-wrap::before,
+        .clients__track-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .clients__track-wrap::before { left: 0; background: linear-gradient(to right, var(--surface), transparent); }
+        .clients__track-wrap::after  { right: 0; background: linear-gradient(to left, var(--surface), transparent); }
+        .clients__track {
+            display: flex;
+            gap: 56px;
+            align-items: center;
+            width: max-content;
+            animation: clientsScroll 28s linear infinite;
+        }
+        .clients__track:hover { animation-play-state: paused; }
+        @keyframes clientsScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .clients__logo {
+            height: 40px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(1.4) opacity(0.65);
+            transition: filter 0.3s ease;
+            flex-shrink: 0;
+        }
+        .clients__logo:hover { filter: grayscale(0) brightness(1) opacity(1); }
+        html[dir="rtl"] .clients__track { animation-direction: reverse; }
+    </style>
+    <!-- Hero image preload -->
+    <link rel="preload" as="image" href="uploads/facad_burjghaleefa.jpg">
+</head>
+<body>
+
+    <!-- ============================================
+         TOP BAR
+         ============================================ -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <div class="topbar__hours">
+                <i class="fa-regular fa-clock"></i>
+                <span class="topbar__hours-text">Mon–Sat 9:00 AM – 6:00 PM | Sunday Closed</span>
+            </div>
+            <div class="topbar__right">
+                <div class="topbar__contact">
+                    <a href="tel:+971509370359"><i class="fa-solid fa-phone"></i>+971 509 370 359</a>
+                    <a href="mailto:sales@skyropetechnical.com"><i class="fa-regular fa-envelope"></i>sales@skyropetechnical.com</a>
+                </div>
+                <!-- Region switcher -->
+                <div class="switcher" id="region-switcher">
+                    <button class="switcher__toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="switcher__flag">
+                            <svg viewBox="0 0 6 3" preserveAspectRatio="none"><rect width="6" height="1" y="0" fill="#00732F"/><rect width="6" height="1" y="1" fill="#fff"/><rect width="6" height="1" y="2" fill="#000"/><rect width="1.5" height="3" fill="#FF0000"/></svg>
+                        </span>
+                        <span class="switcher__region-label">UAE</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="switcher__menu" role="menu">
+                        <a class="switcher__item is-current" href="https://skyropetechnical.com" role="menuitem">
+                            <span class="switcher__flag">
+                                <svg viewBox="0 0 6 3" preserveAspectRatio="none"><rect width="6" height="1" y="0" fill="#00732F"/><rect width="6" height="1" y="1" fill="#fff"/><rect width="6" height="1" y="2" fill="#000"/><rect width="1.5" height="3" fill="#FF0000"/></svg>
+                            </span>
+                            <span class="switcher__item-label">United Arab Emirates</span>
+                            <span class="switcher__item-sub">Current</span>
+                        </a>
+                        <a class="switcher__item" href="https://qa.skyropetechnical.com" role="menuitem">
+                            <span class="switcher__flag">
+                                <svg viewBox="0 0 28 11" preserveAspectRatio="none"><rect width="28" height="11" fill="#fff"/><path d="M28 0 H9 L11 0.92 L9 1.83 L11 2.75 L9 3.66 L11 4.58 L9 5.5 L11 6.42 L9 7.34 L11 8.25 L9 9.17 L11 10.08 L9 11 H28 Z" fill="#8A1538"/></svg>
+                            </span>
+                            <span class="switcher__item-label">Qatar</span>
+                            <span class="switcher__item-sub">qa.</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Language switcher -->
+                <div class="switcher" id="lang-switcher">
+                    <button class="switcher__toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-globe" style="margin:0; color:inherit;"></i>
+                        <span class="switcher__lang-label">EN</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="switcher__menu" role="menu">
+                        <button class="switcher__item is-current" data-lang="en" role="menuitem">
+                            <span class="switcher__item-label">English</span>
+                            <span class="switcher__item-sub">EN</span>
+                        </button>
+                        <button class="switcher__item" data-lang="ar" role="menuitem">
+                            <span class="switcher__item-label">العربية</span>
+                            <span class="switcher__item-sub">AR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         NAV
+         ============================================ -->
+    <nav class="nav" id="nav">
+        <div class="container nav__inner">
+            <a href="#home" class="nav__logo" aria-label="Sky Rope Home">
+                <img src="uploads/skyrope-logo.webp" alt="Sky Rope Technical Services">
+            </a>
+            <ul class="nav__links">
+                <li><a href="#home" class="is-active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav__cta">
+                <a href="#contact" class="btn btn--primary">Get Quote</a>
+                <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__head">
+            <img src="uploads/skyrope-logo.webp" alt="Sky Rope" style="max-height:36px; border-radius:4px; padding:4px 8px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.18);">
+            <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="mobile-menu__links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#safety">Safety</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="btn btn--primary btn--block">Get A Free Quote</a>
+        <a href="https://wa.me/971509243325" class="btn btn--whatsapp btn--block" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero__overlay"></div>
+        <div class="container">
+            <div class="hero__inner">
+                <span class="hero__label reveal" style="--i:0">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    IRATA Certified · UAE Based · Safety First
+                </span>
+                <h1>
+                    <span class="reveal" style="--i:1; display:block;">Access The</span>
+                    <span class="reveal accent" style="--i:2; display:block;">Inaccessible.</span>
+                </h1>
+                <p class="hero__subtext reveal" style="--i:3">
+                    UAE's leading rope access and facade maintenance specialists.
+                    Delivering precision at height — across Dubai's most iconic skylines.
+                </p>
+                <div class="hero__buttons reveal" style="--i:4">
+                    <a href="#contact" class="btn btn--primary">Get A Free Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#services" class="btn btn--outline-light">View Services</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+
+        <div class="hero__stats">
+            <div class="container">
+                <div class="hero__stats-grid">
+                    <div class="stat">
+                        <div class="stat__value" data-count="500" data-suffix="+">0</div>
+                        <div class="stat__label">Projects Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value" data-count="10" data-suffix="+">0</div>
+                        <div class="stat__label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value stat__value--text">IRATA</div>
+                        <div class="stat__label">Certified Technicians</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value stat__value--text">UAE+QA</div>
+                        <div class="stat__label">Regional Coverage</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT
+         ============================================ -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__text reveal">
+                    <span class="section-label">Who We Are</span>
+                    <h2 class="section-title">Sky Rope Technical Services LLC</h2>
+                    <p>Sky Rope Technical Service is a UAE-based company offering work-at-height solutions with the highest level of commitment to safety standards. We pride ourselves on satisfying our valued customers by providing quality workmanship and the safest work methods.</p>
+                    <p>We maintain Commercial, Residential, Hospitality, and High-Rise buildings through Facade Cleaning, Asset Maintenance, Signboard Installation, Lighting works, and bespoke customer requirements. Our team of IRATA-certified rope access technicians brings a vast array of skills and disciplines — enabling us to access the most extreme and challenging locations safely and efficiently.</p>
+                    <ul class="about__trust">
+                        <li><i class="fa-solid fa-check"></i> IRATA Certified Technicians</li>
+                        <li><i class="fa-solid fa-check"></i> ISO-Compliant Safety Standards</li>
+                        <li><i class="fa-solid fa-check"></i> 10+ Years UAE Experience</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="about__image-wrap reveal" style="--i:1">
+                    <img src="uploads/dubai-high-rise-facade-cleaning-family-window-view.png" alt="Sky Rope rope access technicians at work" loading="lazy">
+                    <div class="about__badge">
+                        <div class="about__badge-num">10<span style="font-size:1.2rem;">+</span></div>
+                        <div class="about__badge-text">Years of Excellence<br>in the UAE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES
+         ============================================ -->
+    <section class="section section--dark services" id="services">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-label reveal">What We Do</span>
+                <h2 class="section-title section-title--dark reveal" style="--i:1">Our Services</h2>
+                <p class="section-subtitle reveal" style="--i:2">Full-spectrum rope access and facade solutions for UAE's most demanding structures.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card reveal" style="--i:0">
+                    <div class="service-card__icon"><i class="fa-solid fa-broom"></i></div>
+                    <h3>External Facade Cleaning & Washing</h3>
+                    <p>High-rise glass and exterior surface cleaning using IRATA rope access methods.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:1">
+                    <div class="service-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Facade Maintenance & Repair</h3>
+                    <p>Structural repair, crack sealing, and surface restoration for building exteriors.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:2">
+                    <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>Facade Sealant Application</h3>
+                    <p>Weatherproof sealant application and replacement to protect building envelopes.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:3">
+                    <div class="service-card__icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Facade Cladding Works</h3>
+                    <p>Installation and replacement of cladding panels on high-rise structures.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:0">
+                    <div class="service-card__icon"><i class="fa-regular fa-square"></i></div>
+                    <h3>Facade Glass Installation & Replacement</h3>
+                    <p>Precision glass panel replacement and installation at height.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:1">
+                    <div class="service-card__icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Facade Light Installation & Replacement</h3>
+                    <p>External lighting systems installation, maintenance and replacement.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:2">
+                    <div class="service-card__icon"><i class="fa-solid fa-plane-up"></i></div>
+                    <h3>Aircraft Warning Lights</h3>
+                    <p>Installation and maintenance of aviation warning light systems on tall structures.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:3">
+                    <div class="service-card__icon"><i class="fa-solid fa-crow"></i></div>
+                    <h3>Bird Spike Installation</h3>
+                    <p>Anti-bird deterrent systems for ledges, facades, and building projections.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:0">
+                    <div class="service-card__icon"><i class="fa-solid fa-water"></i></div>
+                    <h3>High-Level Glass Cleaning</h3>
+                    <p>Specialist cleaning of inaccessible glazing using rope access techniques.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal" style="--i:1">
+                    <div class="service-card__icon"><i class="fa-solid fa-mountain"></i></div>
+                    <h3>Mountaineering & Slope Scaling</h3>
+                    <p>Technical rope access for challenging natural and constructed slopes.</p>
+                    <a href="#contact">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         WHY CHOOSE US
+         ============================================ -->
+    <section class="section section--light" id="why">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-label reveal">Our Advantage</span>
+                <h2 class="section-title reveal" style="--i:1">Quality of Work. Safest Work Method.</h2>
+            </div>
+            <div class="why__grid">
+                <div class="why-item reveal" style="--i:0">
+                    <div class="why-item__icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>IRATA Certified</h3>
+                    <p>All technicians hold current IRATA rope access certification.</p>
+                </div>
+                <div class="why-item reveal" style="--i:1">
+                    <div class="why-item__icon"><i class="fa-solid fa-gear"></i></div>
+                    <h3>Full Engineering Programs</h3>
+                    <p>Servicing and maintenance programs tailored to your asset requirements.</p>
+                </div>
+                <div class="why-item reveal" style="--i:2">
+                    <div class="why-item__icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Any Height, Any Surface</h3>
+                    <p>From single-storey facades to 80-floor towers — we access it all.</p>
+                </div>
+                <div class="why-item reveal" style="--i:0">
+                    <div class="why-item__icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <h3>Safety-First Culture</h3>
+                    <p>Every job starts with a site-specific risk assessment and method statement.</p>
+                </div>
+                <div class="why-item reveal" style="--i:1">
+                    <div class="why-item__icon"><i class="fa-regular fa-clock"></i></div>
+                    <h3>On-Time Delivery</h3>
+                    <p>Structured project timelines with dedicated site supervisors.</p>
+                </div>
+                <div class="why-item reveal" style="--i:2">
+                    <div class="why-item__icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>UAE + Qatar Coverage</h3>
+                    <p>Based in Dubai DIP, operating across all seven emirates and Doha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SAFETY
+         ============================================ -->
+    <section class="section section--dark-2" id="safety">
+        <div class="container">
+            <div class="safety__grid">
+                <div class="safety__text reveal">
+                    <span class="section-label">Our Commitment</span>
+                    <h2 class="section-title section-title--dark">Safety Is Not An Option. It Is Our Standard.</h2>
+                    <p>Every Sky Rope operation begins with a comprehensive risk assessment. Our IRATA-certified technicians follow strict safe-work method statements for every task — regardless of scale. We comply with UAE Ministry of Human Resources regulations, Dubai Municipality guidelines, and international IRATA standards.</p>
+                </div>
+                <div class="safety__badges">
+                    <div class="badge-tile reveal" style="--i:0">
+                        <div class="badge-tile__icon"><i class="fa-solid fa-medal"></i></div>
+                        <h4>IRATA Level 1–3 Certified</h4>
+                        <p>Internationally recognised rope access standard.</p>
+                    </div>
+                    <div class="badge-tile reveal" style="--i:1">
+                        <div class="badge-tile__icon"><i class="fa-solid fa-landmark"></i></div>
+                        <h4>UAE Ministry Compliant</h4>
+                        <p>Adheres to Ministry of Human Resources regulations.</p>
+                    </div>
+                    <div class="badge-tile reveal" style="--i:2">
+                        <div class="badge-tile__icon"><i class="fa-solid fa-building-columns"></i></div>
+                        <h4>Dubai Municipality Approved</h4>
+                        <p>Registered and approved contractor in Dubai.</p>
+                    </div>
+                    <div class="badge-tile reveal" style="--i:3">
+                        <div class="badge-tile__icon"><i class="fa-solid fa-file-shield"></i></div>
+                        <h4>Safe Work Method Statements</h4>
+                        <p>Site-specific documentation for every project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROCESS
+         ============================================ -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-label reveal">How We Work</span>
+                <h2 class="section-title reveal" style="--i:1">From Enquiry to Completion</h2>
+            </div>
+            <div class="process__steps">
+                <div class="step reveal" style="--i:0">
+                    <div class="step__num"><i class="fa-solid fa-phone"></i><span class="step__counter">1</span></div>
+                    <div>
+                        <h3>Initial Enquiry</h3>
+                        <p>Call or WhatsApp us with your requirement.</p>
+                    </div>
+                </div>
+                <div class="step reveal" style="--i:1">
+                    <div class="step__num"><i class="fa-solid fa-clipboard"></i><span class="step__counter">2</span></div>
+                    <div>
+                        <h3>Site Assessment</h3>
+                        <p>Our team visits and prepares a detailed method statement.</p>
+                    </div>
+                </div>
+                <div class="step reveal" style="--i:2">
+                    <div class="step__num"><i class="fa-solid fa-file-contract"></i><span class="step__counter">3</span></div>
+                    <div>
+                        <h3>Proposal & Approval</h3>
+                        <p>You receive a transparent quote with full scope.</p>
+                    </div>
+                </div>
+                <div class="step reveal" style="--i:3">
+                    <div class="step__num"><i class="fa-solid fa-hard-hat"></i><span class="step__counter">4</span></div>
+                    <div>
+                        <h3>Safe Execution</h3>
+                        <p>IRATA-certified team executes with zero-compromise safety.</p>
+                    </div>
+                </div>
+                <div class="step reveal" style="--i:4">
+                    <div class="step__num"><i class="fa-solid fa-circle-check"></i><span class="step__counter">5</span></div>
+                    <div>
+                        <h3>Quality Sign-Off</h3>
+                        <p>Documented completion report provided to client.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GALLERY
+         ============================================ -->
+    <section class="section section--dark" id="gallery">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-label reveal">Our Work</span>
+                <h2 class="section-title section-title--dark reveal" style="--i:1">See Our Projects</h2>
+            </div>
+            <div class="gallery__grid" id="gallery-grid">
+                <!-- populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox__btn lightbox__close" id="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox__btn lightbox__prev" id="lightbox-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" class="lightbox__image" id="lightbox-image">
+        <button class="lightbox__btn lightbox__next" id="lightbox-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox__counter" id="lightbox-counter">1 / 8</div>
+    </div>
+
+    <!-- ============================================
+         TESTIMONIALS
+         ============================================ -->
+    <section class="section section--light">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-label reveal">Client Feedback</span>
+                <h2 class="section-title reveal" style="--i:1">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials__viewport reveal" id="testimonials">
+                <div class="testimonials__track" id="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__quote">Sky Rope's team was highly professional and efficient. They completed the facade cleaning on time and exceeded our expectations. Highly recommend their services!</p>
+                        <div class="testimonial-card__author">John D. <span>· Property Manager</span></div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__quote">Their rope access techniques were both safe and cost-effective. The team delivered top-notch results for our facade maintenance project.</p>
+                        <div class="testimonial-card__author">Rahul M. <span>· Facility Manager</span></div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__quote">From start to finish, the Sky Rope team provided outstanding service. Their approach to safety and quality is commendable.</p>
+                        <div class="testimonial-card__author">Claire S. <span>· Business Owner</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__dots" id="testimonials-dots"></div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CLIENTS STRIP
+         ============================================ -->
+    <section class="clients">
+        <div class="clients__header">
+            <p class="clients__label">Trusted By</p>
+        </div>
+        <div class="clients__track-wrap">
+            <div class="clients__track" id="clients-track">
+                <img src="uploads/clients/ejadah-logo.png"          alt="Ejadah"        class="clients__logo">
+                <img src="uploads/clients/emrill.png"               alt="Emrill"         class="clients__logo">
+                <img src="uploads/clients/deyaar-client.png"        alt="Deyaar"         class="clients__logo">
+                <img src="uploads/clients/hilton-logo-client.png"   alt="Hilton"         class="clients__logo">
+                <img src="uploads/clients/Astoria-logo.png"         alt="Astoria Hotel"  class="clients__logo">
+                <img src="uploads/clients/Copthorne-logo.png"       alt="Copthorne"      class="clients__logo">
+                <img src="uploads/clients/imdadd-logo.png"          alt="Imdaad"         class="clients__logo">
+                <img src="uploads/clients/nikki-beach-logo.png"     alt="Nikki Beach"    class="clients__logo">
+                <img src="uploads/clients/skb-realestate.png"       alt="SKB Real Estate" class="clients__logo">
+                <img src="uploads/clients/idma-client-logo.png"     alt="IDMA"           class="clients__logo">
+                <!-- Duplicate set for seamless loop -->
+                <img src="uploads/clients/ejadah-logo.png"          alt="Ejadah"        class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/emrill.png"               alt="Emrill"         class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/deyaar-client.png"        alt="Deyaar"         class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/hilton-logo-client.png"   alt="Hilton"         class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/Astoria-logo.png"         alt="Astoria Hotel"  class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/Copthorne-logo.png"       alt="Copthorne"      class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/imdadd-logo.png"          alt="Imdaad"         class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/nikki-beach-logo.png"     alt="Nikki Beach"    class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/skb-realestate.png"       alt="SKB Real Estate" class="clients__logo" aria-hidden="true">
+                <img src="uploads/clients/idma-client-logo.png"     alt="IDMA"           class="clients__logo" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COVERAGE
+         ============================================ -->
+    <section class="section section--dark-2">
+        <div class="container">
+            <div class="coverage__grid">
+                <div class="coverage__text reveal">
+                    <span class="section-label">Our Coverage</span>
+                    <h2 class="section-title section-title--dark">Operating Across UAE & Qatar</h2>
+                    <p>Headquartered in Dubai Investment Park, we deploy across all seven emirates — Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, Ras Al Khaimah, and Umm Al Quwain — and are expanding into Doha, Qatar.</p>
+                    <div class="coverage__badges">
+                        <div class="coverage-badge"><span class="coverage-badge__flag">🇦🇪</span> UAE · All Emirates</div>
+                        <div class="coverage-badge"><span class="coverage-badge__flag">🇶🇦</span> Qatar · Expanding</div>
+                    </div>
+                </div>
+                <div class="coverage__map reveal" style="--i:1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14466.486921044589!2d55.1762197!3d24.9789814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f737b80bcf489%3A0x551077941393b035!2sSky%20Rope%20Technical%20Services!5e0!3m2!1sen!2sin!4v1732510214546!5m2!1sen!2sin"
+                        style="border:0; filter: grayscale(20%) contrast(1.1) invert(0.92) hue-rotate(180deg);"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Sky Rope Office Location"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT
+         ============================================ -->
+    <section class="section section--light" id="contact">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-label reveal">Get In Touch</span>
+                <h2 class="section-title reveal" style="--i:1">Request a Free Quote</h2>
+                <p class="section-subtitle reveal" style="--i:2">Have a project in mind? Reach out and our team will respond within 24 hours.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__cards reveal">
+                    <div class="contact-card">
+                        <div class="contact-card__icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-card__body">
+                            <h4>Phone</h4>
+                            <a href="tel:+971509370359">+971 509 370 359</a>
+                            <a href="tel:+971509243325">+971 509 243 325</a>
+                            <a href="tel:+97142875970">+971 4 287 5970</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card__icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="contact-card__body">
+                            <h4>Email</h4>
+                            <a href="mailto:sales@skyropetechnical.com">sales@skyropetechnical.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-card__body">
+                            <h4>Office</h4>
+                            <p>Office No. 106-02, Multiline 6, Arjuman Building, Near DIP Metro Station, DIP 1, Dubai, UAE</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card__icon"><i class="fa-regular fa-clock"></i></div>
+                        <div class="contact-card__body">
+                            <h4>Working Hours</h4>
+                            <p>Monday – Saturday: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/971509243325?text=Hi%20Sky%20Rope%2C%20I%27d%20like%20to%20enquire%20about%20your%20services" target="_blank" rel="noopener" class="btn btn--whatsapp btn--block">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact__form-wrap reveal" style="--i:1">
+                    <!-- Form posts as JSON to Cloudflare Pages Function at /api/contact -->
+                    <form id="contact-form" novalidate>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="f-name">Full Name <span class="req">*</span></label>
+                                <input type="text" id="f-name" name="name" required>
+                                <span class="form-field__error">Please enter your name</span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-email">Email Address <span class="req">*</span></label>
+                                <input type="email" id="f-email" name="email" required>
+                                <span class="form-field__error">Please enter a valid email</span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-phone">Phone / WhatsApp</label>
+                                <input type="tel" id="f-phone" name="phone">
+                                <span class="form-field__error">Please enter a valid phone</span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-company">Company Name</label>
+                                <input type="text" id="f-company" name="company">
+                                <span class="form-field__error"></span>
+                            </div>
+                            <div class="form-field form-field--full">
+                                <label for="f-service">Service Required <span class="req">*</span></label>
+                                <select id="f-service" name="service" required>
+                                    <option value="">— Select a service —</option>
+                                    <option>External Facade Cleaning & Washing</option>
+                                    <option>Facade Maintenance & Repair</option>
+                                    <option>Facade Sealant Application</option>
+                                    <option>Facade Cladding Works</option>
+                                    <option>Facade Glass Installation & Replacement</option>
+                                    <option>Facade Light Installation & Replacement</option>
+                                    <option>Aircraft Warning Lights</option>
+                                    <option>Bird Spike Installation</option>
+                                    <option>High-Level Glass Cleaning</option>
+                                    <option>Mountaineering & Slope Scaling</option>
+                                </select>
+                                <span class="form-field__error">Please select a service</span>
+                            </div>
+                            <div class="form-field form-field--full">
+                                <label for="f-message">Your Message <span class="req">*</span></label>
+                                <textarea id="f-message" name="message" rows="4" required></textarea>
+                                <span class="form-field__error">Please enter a message</span>
+                            </div>
+                            <div class="form-field form-field--full">
+                                <button type="submit" class="btn btn--primary btn--block">Send Enquiry <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-success" id="form-success">
+                        <i class="fa-solid fa-check"></i>
+                        <h3>Enquiry Received</h3>
+                        <p>Your enquiry has been sent. We'll respond within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="uploads/skyrope-logo.webp" alt="Sky Rope Technical Services">
+                    <p>UAE's leading IRATA-certified rope access and facade maintenance specialists. Access the inaccessible — safely, precisely, every time.</p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/profile.php?id=61570872630218" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/skyropetechnicalservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/skyrope-technical-services-llc" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#safety">Safety</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer__list">
+                        <li><a href="#services">Facade Cleaning</a></li>
+                        <li><a href="#services">Facade Maintenance</a></li>
+                        <li><a href="#services">Cladding Works</a></li>
+                        <li><a href="#services">Glass Installation</a></li>
+                        <li><a href="#services">Aircraft Warning Lights</a></li>
+                        <li><a href="#services">Bird Spike Installation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div>© 2026 Sky Rope Technical Services LLC. All Rights Reserved.</div>
+                <div class="tagline">Designed for the future. Built for height.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         FLOATING BUTTONS
+         ============================================ -->
+    <a href="https://wa.me/971509243325?text=Hi%20Sky%20Rope%2C%20I%27d%20like%20to%20enquire%20about%20your%20services" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ============================================
+         JSON-LD Schema
+         ============================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sky Rope Technical Services LLC",
+      "description": "IRATA-certified rope access and facade maintenance specialists serving UAE and Qatar.",
+      "url": "https://skyropetechnical.com",
+      "logo": "https://skyropetechnical.com/images/skyrope-logo.webp",
+      "image": "https://skyropetechnical.com/uploads/facad_burjghaleefa.jpg",
+      "telephone": ["+971509370359", "+971509243325", "+97142875970"],
+      "email": "sales@skyropetechnical.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office No. 106-02, Multiline 6, Arjuman Building, Near DIP Metro Station, DIP 1",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61570872630218",
+        "https://www.instagram.com/skyropetechnicalservices",
+        "https://www.linkedin.com/company/skyrope-technical-services-llc"
+      ]
+    }
+    </script>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script>
+        (function () {
+            'use strict';
+
+            /* ---------- Image fallbacks (preview-safe; live site uses real images) ---------- */
+            const FALLBACKS = {
+                logo: 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><rect width="200" height="60" rx="6" fill="#009a8e"/><text x="50%" y="56%" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="white" dominant-baseline="middle">SKY ROPE</text></svg>'),
+                photo: 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#272627"/></linearGradient><pattern id="d" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1.2" fill="rgba(0,154,142,0.25)"/></pattern></defs><rect width="800" height="600" fill="url(#g)"/><rect width="800" height="600" fill="url(#d)"/><g fill="none" stroke="#009a8e" stroke-width="2" opacity="0.6"><path d="M120 0 L120 600"/><path d="M280 0 L280 600"/><path d="M440 0 L440 600"/><path d="M600 0 L600 600"/></g><g fill="#009a8e" opacity="0.85"><rect x="100" y="180" width="40" height="420"/><rect x="260" y="100" width="40" height="500"/><rect x="420" y="240" width="40" height="360"/><rect x="580" y="60" width="40" height="540"/></g><text x="50%" y="50%" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="32" fill="#009a8e" opacity="0.5">SKY ROPE</text></svg>')
+            };
+            const swap = (img) => {
+                if (img.dataset.fallbackApplied) return;
+                img.dataset.fallbackApplied = '1';
+                const isLogo = img.closest('.nav__logo, .footer__brand, .mobile-menu__head');
+                img.src = isLogo ? FALLBACKS.logo : FALLBACKS.photo;
+            };
+            const watchImg = (img) => {
+                if (img.complete && img.naturalWidth === 0) swap(img);
+                img.addEventListener('error', () => swap(img));
+            };
+            // In preview sandboxes the live skyropetechnical.com images hot-link-block;
+            // swap proactively so no network errors are logged. On the real domain
+            // (skyropetechnical.com / qa.skyropetechnical.com) the originals load fine.
+            const isPreview = /claudeusercontent\.com$|\.preview\.|localhost|127\.0\.0\.1/i.test(location.hostname);
+            if (isPreview) {
+                document.querySelectorAll('img[src*="skyropetechnical.com"]').forEach(swap);
+            }
+            document.querySelectorAll('img').forEach(watchImg);
+            // expose for dynamically-added images (gallery)
+            window.__watchImg = (img) => {
+                if (isPreview && img.src && img.src.indexOf('skyropetechnical.com') !== -1) swap(img);
+                watchImg(img);
+            };
+
+            /* ---------- Nav scroll state ---------- */
+            const nav = document.getElementById('nav');
+            const backToTop = document.getElementById('back-to-top');
+            const onScroll = () => {
+                const y = window.scrollY;
+                nav.classList.toggle('is-scrolled', y > 80);
+                backToTop.classList.toggle('is-visible', y > 400);
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            /* ---------- Mobile menu ---------- */
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const openBtn = document.getElementById('nav-hamburger');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const openMenu = () => { menu.classList.add('is-open'); overlay.classList.add('is-open'); menu.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; };
+            const closeMenu = () => { menu.classList.remove('is-open'); overlay.classList.remove('is-open'); menu.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; };
+            openBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+            /* ---------- Back to top ---------- */
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            /* ---------- Active nav link ---------- */
+            const navLinks = Array.from(document.querySelectorAll('.nav__links a'));
+            const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            const sectionObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        const id = '#' + e.target.id;
+                        navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === id));
+                    }
+                });
+            }, { rootMargin: '-40% 0px -55% 0px' });
+            sections.forEach(s => sectionObs.observe(s));
+
+            /* ---------- Reveal on scroll ---------- */
+            const revealObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-visible');
+                        revealObs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+            /* ---------- Stats counter ---------- */
+            const animateCount = (el) => {
+                const target = parseInt(el.dataset.count, 10);
+                const suffix = el.dataset.suffix || '';
+                const duration = 1600;
+                const start = performance.now();
+                const tick = (now) => {
+                    const t = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - t, 3);
+                    el.textContent = Math.floor(eased * target) + (t === 1 ? suffix : '');
+                    if (t < 1) requestAnimationFrame(tick);
+                    else el.textContent = target + suffix;
+                };
+                requestAnimationFrame(tick);
+            };
+            const statObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        animateCount(e.target);
+                        statObs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            document.querySelectorAll('.stat__value[data-count]').forEach(el => statObs.observe(el));
+
+            /* ---------- Gallery + Lightbox ---------- */
+            const galleryImages = [
+                'uploads/rope_hanging_technician.jpg',
+                'uploads/high_rise_building_maintenance.jpg',
+                'uploads/facade_glass_dubai.jpg',
+                'uploads/rope_access.jpg',
+                'uploads/balcony_view_standing_person.jpg',
+                'uploads/maintenance_body_harness.jpg'
+            ];
+            const galleryGrid = document.getElementById('gallery-grid');
+            galleryImages.forEach((src, idx) => {
+                const item = document.createElement('div');
+                item.className = 'reveal gallery__item';
+                item.style.setProperty('--i', idx % 4);
+                item.innerHTML = `
+                    <img src="${src}" alt="Sky Rope project ${idx + 1}" loading="lazy">
+                    <div class="gallery__overlay"><i class="fa-solid fa-expand"></i></div>
+                `;
+                item.addEventListener('click', () => openLightbox(idx));
+                galleryGrid.appendChild(item);
+                const imgEl = item.querySelector('img');
+                if (window.__watchImg && imgEl) window.__watchImg(imgEl);
+                revealObs.observe(item);
+            });
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-image');
+            const lightboxCounter = document.getElementById('lightbox-counter');
+            let lightboxIndex = 0;
+
+            const openLightbox = (idx) => {
+                lightboxIndex = idx;
+                updateLightbox();
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeLightbox = () => {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+            const updateLightbox = () => {
+                lightboxImg.src = galleryImages[lightboxIndex];
+                lightboxImg.alt = `Project ${lightboxIndex + 1}`;
+                lightboxCounter.textContent = `${lightboxIndex + 1} / ${galleryImages.length}`;
+            };
+            const nextImg = () => { lightboxIndex = (lightboxIndex + 1) % galleryImages.length; updateLightbox(); };
+            const prevImg = () => { lightboxIndex = (lightboxIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); };
+
+            document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+            document.getElementById('lightbox-next').addEventListener('click', nextImg);
+            document.getElementById('lightbox-prev').addEventListener('click', prevImg);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('is-open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImg();
+                if (e.key === 'ArrowLeft') prevImg();
+            });
+
+            /* ---------- Testimonials carousel ---------- */
+            const track = document.getElementById('testimonials-track');
+            const dotsWrap = document.getElementById('testimonials-dots');
+            const testimonials = document.getElementById('testimonials');
+            const slides = track.children.length;
+            let activeSlide = 0;
+            let autoTimer = null;
+
+            for (let i = 0; i < slides; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'testimonials__dot';
+                dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+                if (i === 0) dot.classList.add('is-active');
+                dot.addEventListener('click', () => goTo(i));
+                dotsWrap.appendChild(dot);
+            }
+            const goTo = (i) => {
+                activeSlide = i;
+                track.style.transform = `translateX(-${i * 100}%)`;
+                Array.from(dotsWrap.children).forEach((d, idx) => d.classList.toggle('is-active', idx === i));
+            };
+            const startAuto = () => {
+                stopAuto();
+                autoTimer = setInterval(() => goTo((activeSlide + 1) % slides), 5000);
+            };
+            const stopAuto = () => { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } };
+            testimonials.addEventListener('mouseenter', stopAuto);
+            testimonials.addEventListener('mouseleave', startAuto);
+            startAuto();
+
+            /* ---------- Contact form validation ---------- */
+            const form = document.getElementById('contact-form');
+            const successPanel = document.getElementById('form-success');
+
+            const validate = () => {
+                let ok = true;
+                const setError = (field, hasErr) => {
+                    field.closest('.form-field').classList.toggle('has-error', hasErr);
+                    if (hasErr) ok = false;
+                };
+                const name = form.querySelector('#f-name');
+                const email = form.querySelector('#f-email');
+                const service = form.querySelector('#f-service');
+                const message = form.querySelector('#f-message');
+                setError(name, !name.value.trim());
+                setError(email, !email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value));
+                setError(service, !service.value);
+                setError(message, !message.value.trim());
+                return ok;
+            };
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!validate()) return;
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const submitOriginalHTML = submitBtn.innerHTML;
+                const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+                const ERR_MSG = {
+                    en: "Something went wrong. Please WhatsApp us on +971 509 243 325.",
+                    ar: "حدث خطأ ما. يرجى التواصل معنا عبر واتساب على +971 509 243 325."
+                };
+                const SENDING = { en: 'Sending…', ar: 'جاري الإرسال…' };
+
+                // Remove any stale inline error
+                const oldErr = form.querySelector('.form-submit-error');
+                if (oldErr) oldErr.remove();
+
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.cursor = 'wait';
+                submitBtn.innerHTML = SENDING[lang];
+
+                const payload = {
+                    name: form.querySelector('#f-name').value.trim(),
+                    email: form.querySelector('#f-email').value.trim(),
+                    phone: form.querySelector('#f-phone').value.trim(),
+                    company: form.querySelector('#f-company').value.trim(),
+                    service: form.querySelector('#f-service').value,
+                    message: form.querySelector('#f-message').value.trim(),
+                    source: 'website'
+                };
+
+                try {
+                    const res = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!res.ok) throw new Error('Bad response');
+                    form.style.display = 'none';
+                    successPanel.classList.add('is-visible');
+                } catch (err) {
+                    console.error('Contact form submit failed:', err);
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '';
+                    submitBtn.style.cursor = '';
+                    submitBtn.innerHTML = submitOriginalHTML;
+                    const errEl = document.createElement('div');
+                    errEl.className = 'form-submit-error';
+                    errEl.style.cssText = 'color:#d33; font-size:0.9rem; margin-top:12px; text-align:center; padding:10px 14px; background:rgba(221,51,51,0.08); border:1px solid rgba(221,51,51,0.25); border-radius:4px;';
+                    errEl.textContent = ERR_MSG[lang];
+                    submitBtn.parentElement.appendChild(errEl);
+                }
+            });
+
+            form.querySelectorAll('input, textarea, select').forEach(el => {
+                el.addEventListener('input', () => {
+                    const wrap = el.closest('.form-field');
+                    if (wrap) wrap.classList.remove('has-error');
+                });
+            });
+
+            /* ---------- Smooth scroll for in-page links (offset for sticky nav) ---------- */
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const target = document.querySelector(a.getAttribute('href'));
+                    if (!target) return;
+                    e.preventDefault();
+                    const top = target.getBoundingClientRect().top + window.scrollY - (nav.offsetHeight - 4);
+                    window.scrollTo({ top, behavior: 'smooth' });
+                });
+            });
+
+            /* ---------- Region + Language switchers (dropdowns) ---------- */
+            document.querySelectorAll('.switcher').forEach(sw => {
+                const toggle = sw.querySelector('.switcher__toggle');
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const wasOpen = sw.classList.contains('is-open');
+                    document.querySelectorAll('.switcher.is-open').forEach(o => o.classList.remove('is-open'));
+                    if (!wasOpen) sw.classList.add('is-open');
+                    toggle.setAttribute('aria-expanded', !wasOpen);
+                });
+            });
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.switcher.is-open').forEach(o => {
+                    o.classList.remove('is-open');
+                    o.querySelector('.switcher__toggle').setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            /* ---------- Internationalization (EN / AR) ---------- */
+            const AR = {
+                // Topbar
+                "Mon–Sat 9:00 AM – 6:00 PM | Sunday Closed": "الاثنين إلى السبت 9:00 ص – 6:00 م | الأحد مغلق",
+                "Monday – Saturday: 9:00 AM – 6:00 PM": "الاثنين – السبت: 9:00 ص – 6:00 م",
+                "Sunday: Closed": "الأحد: مغلق",
+                "UAE": "الإمارات",
+                "United Arab Emirates": "الإمارات العربية المتحدة",
+                "Current": "حالي",
+                "Qatar": "قطر",
+                "English": "الإنجليزية",
+                // Nav
+                "Home": "الرئيسية",
+                "About": "من نحن",
+                "Services": "الخدمات",
+                "Safety": "السلامة",
+                "Gallery": "المعرض",
+                "Contact": "اتصل بنا",
+                "Get Quote": "اطلب عرضًا",
+                "Get A Free Quote": "احصل على عرض سعر مجاني",
+                "WhatsApp Us": "تواصل عبر واتساب",
+                // Hero
+                "IRATA Certified · UAE Based · Safety First": "معتمدون من إيراتا · مقرنا الإمارات · السلامة أولاً",
+                "Access The": "نصل إلى",
+                "Inaccessible.": "المستحيل.",
+                "UAE's leading rope access and facade maintenance specialists. Delivering precision at height — across Dubai's most iconic skylines.":
+                    "نحن المتخصصون الرائدون في الإمارات في خدمات الوصول بالحبال وصيانة الواجهات. ندقّق على ارتفاعات شاهقة — عبر أبرز معالم سماء دبي.",
+                "View Services": "تصفّح الخدمات",
+                "Projects Completed": "مشروع منجز",
+                "Years Experience": "سنوات خبرة",
+                "Certified Technicians": "فنيون معتمدون",
+                "Regional Coverage": "تغطية إقليمية",
+                // About
+                "Who We Are": "من نحن",
+                "Sky Rope Technical Services LLC": "شركة سكاي روب للخدمات الفنية ذ.م.م",
+                "Sky Rope Technical Service is a UAE-based company offering work-at-height solutions with the highest level of commitment to safety standards. We pride ourselves on satisfying our valued customers by providing quality workmanship and the safest work methods.":
+                    "سكاي روب للخدمات الفنية شركة مقرها الإمارات تقدّم حلول العمل على الارتفاعات بأعلى التزام بمعايير السلامة. نفتخر بإرضاء عملائنا الكرام عبر تقديم جودة عمل عالية وأكثر أساليب العمل أمانًا.",
+                "We maintain Commercial, Residential, Hospitality, and High-Rise buildings through Facade Cleaning, Asset Maintenance, Signboard Installation, Lighting works, and bespoke customer requirements. Our team of IRATA-certified rope access technicians brings a vast array of skills and disciplines — enabling us to access the most extreme and challenging locations safely and efficiently.":
+                    "نتولّى صيانة المباني التجارية والسكنية والفندقية والشاهقة من خلال تنظيف الواجهات وصيانة الأصول وتركيب اللوحات الإعلانية وأعمال الإنارة، بالإضافة إلى المتطلبات الخاصة لكل عميل. يمتلك فريقنا من فنيي الوصول بالحبال المعتمدين من إيراتا مهارات واسعة تمكّننا من الوصول إلى أصعب المواقع وأخطرها بأمان وكفاءة.",
+                "IRATA Certified Technicians": "فنيون معتمدون من إيراتا",
+                "ISO-Compliant Safety Standards": "معايير سلامة متوافقة مع ISO",
+                "10+ Years UAE Experience": "أكثر من 10 سنوات خبرة في الإمارات",
+                "Learn More About Us": "تعرّف علينا أكثر",
+                "Years of Excellence in the UAE": "سنوات من التميّز في الإمارات",
+                // Services
+                "What We Do": "ما نقدّمه",
+                "Our Services": "خدماتنا",
+                "Full-spectrum rope access and facade solutions for UAE's most demanding structures.":
+                    "حلول متكاملة للوصول بالحبال وصيانة الواجهات لأكثر المباني تحديًا في الإمارات.",
+                "External Facade Cleaning & Washing": "تنظيف وغسيل الواجهات الخارجية",
+                "High-rise glass and exterior surface cleaning using IRATA rope access methods.":
+                    "تنظيف الزجاج والأسطح الخارجية للمباني الشاهقة بطرق الوصول بالحبال المعتمدة من إيراتا.",
+                "Facade Maintenance & Repair": "صيانة وإصلاح الواجهات",
+                "Structural repair, crack sealing, and surface restoration for building exteriors.":
+                    "إصلاحات إنشائية وسدّ التشققات وترميم الأسطح لواجهات المباني.",
+                "Facade Sealant Application": "تطبيق المواد المانعة للتسرّب",
+                "Weatherproof sealant application and replacement to protect building envelopes.":
+                    "تطبيق واستبدال المواد العازلة لحماية أغلفة المباني من العوامل الجوية.",
+                "Facade Cladding Works": "أعمال كسوة الواجهات",
+                "Installation and replacement of cladding panels on high-rise structures.":
+                    "تركيب واستبدال ألواح الكسوة على المباني الشاهقة.",
+                "Facade Glass Installation & Replacement": "تركيب واستبدال زجاج الواجهات",
+                "Precision glass panel replacement and installation at height.":
+                    "استبدال وتركيب ألواح الزجاج بدقة على الارتفاعات.",
+                "Facade Light Installation & Replacement": "تركيب واستبدال إنارة الواجهات",
+                "External lighting systems installation, maintenance and replacement.":
+                    "تركيب وصيانة واستبدال أنظمة الإضاءة الخارجية.",
+                "Aircraft Warning Lights": "إنارة تحذير الطيران",
+                "Installation and maintenance of aviation warning light systems on tall structures.":
+                    "تركيب وصيانة أنظمة إنارة تحذير الطيران على المباني الشاهقة.",
+                "Bird Spike Installation": "تركيب أشواك صدّ الطيور",
+                "Anti-bird deterrent systems for ledges, facades, and building projections.":
+                    "أنظمة ردع الطيور للحواف والواجهات وبروزات المباني.",
+                "High-Level Glass Cleaning": "تنظيف الزجاج على الارتفاعات",
+                "Specialist cleaning of inaccessible glazing using rope access techniques.":
+                    "تنظيف متخصص للأسطح الزجاجية يصعب الوصول إليها باستخدام تقنيات الحبال.",
+                "Mountaineering & Slope Scaling": "أعمال التسلّق والمنحدرات",
+                "Technical rope access for challenging natural and constructed slopes.":
+                    "وصول فني بالحبال للمنحدرات الطبيعية والإنشائية الصعبة.",
+                "Enquire": "استفسر",
+                // Why
+                "Our Advantage": "ما يميّزنا",
+                "Quality of Work. Safest Work Method.": "جودة العمل. أأمن طرق التنفيذ.",
+                "IRATA Certified": "اعتماد إيراتا",
+                "All technicians hold current IRATA rope access certification.":
+                    "جميع فنيينا حاصلون على شهادة إيراتا سارية للوصول بالحبال.",
+                "Full Engineering Programs": "برامج هندسية متكاملة",
+                "Servicing and maintenance programs tailored to your asset requirements.":
+                    "برامج صيانة وخدمة مخصّصة وفقًا لاحتياجات أصولكم.",
+                "Any Height, Any Surface": "أي ارتفاع، أي سطح",
+                "From single-storey facades to 80-floor towers — we access it all.":
+                    "من الواجهات ذات الطابق الواحد إلى الأبراج ذات 80 طابقًا — نصل إليها جميعًا.",
+                "Safety-First Culture": "ثقافة السلامة أولًا",
+                "Every job starts with a site-specific risk assessment and method statement.":
+                    "كل مهمة تبدأ بتقييم مخاطر خاص بالموقع وبيان طريقة العمل.",
+                "On-Time Delivery": "تسليم في الموعد",
+                "Structured project timelines with dedicated site supervisors.":
+                    "جداول زمنية واضحة للمشاريع مع مشرفي مواقع متخصصين.",
+                "UAE + Qatar Coverage": "تغطية الإمارات وقطر",
+                "Based in Dubai DIP, operating across all seven emirates and Doha.":
+                    "مقرنا في مجمع دبي للاستثمار، ونعمل في الإمارات السبع وفي الدوحة.",
+                // Safety
+                "Our Commitment": "التزامنا",
+                "Safety Is Not An Option. It Is Our Standard.": "السلامة ليست خيارًا. بل معيارنا.",
+                "Every Sky Rope operation begins with a comprehensive risk assessment. Our IRATA-certified technicians follow strict safe-work method statements for every task — regardless of scale. We comply with UAE Ministry of Human Resources regulations, Dubai Municipality guidelines, and international IRATA standards.":
+                    "كل عملية في سكاي روب تبدأ بتقييم شامل للمخاطر. يلتزم فنيونا المعتمدون من إيراتا ببيانات طريقة عمل صارمة لكل مهمة مهما كان حجمها. نحن نمتثل لأنظمة وزارة الموارد البشرية الإماراتية، وإرشادات بلدية دبي، ومعايير إيراتا الدولية.",
+                "IRATA Level 1–3 Certified": "معتمدون من إيراتا للمستويات 1–3",
+                "Internationally recognised rope access standard.": "معيار دولي معترف به للوصول بالحبال.",
+                "UAE Ministry Compliant": "متوافقون مع الوزارة الإماراتية",
+                "Adheres to Ministry of Human Resources regulations.": "نلتزم بأنظمة وزارة الموارد البشرية.",
+                "Dubai Municipality Approved": "معتمدون لدى بلدية دبي",
+                "Registered and approved contractor in Dubai.": "مقاول مسجّل ومعتمد في دبي.",
+                "Safe Work Method Statements": "بيانات طريقة العمل الآمنة",
+                "Site-specific documentation for every project.": "توثيق خاص بالموقع لكل مشروع.",
+                // Process
+                "How We Work": "كيف نعمل",
+                "From Enquiry to Completion": "من الاستفسار إلى الإنجاز",
+                "Initial Enquiry": "الاستفسار الأولي",
+                "Call or WhatsApp us with your requirement.": "اتصل بنا أو راسلنا على واتساب بمتطلبك.",
+                "Site Assessment": "تقييم الموقع",
+                "Our team visits and prepares a detailed method statement.": "يزور فريقنا الموقع ويُعدّ بيان طريقة عمل تفصيلي.",
+                "Proposal & Approval": "العرض والاعتماد",
+                "You receive a transparent quote with full scope.": "تستلم عرضًا شفافًا بنطاق كامل للعمل.",
+                "Safe Execution": "تنفيذ آمن",
+                "IRATA-certified team executes with zero-compromise safety.": "فريق معتمد من إيراتا ينفّذ بمعايير سلامة لا تقبل المساومة.",
+                "Quality Sign-Off": "اعتماد الجودة",
+                "Documented completion report provided to client.": "نسلّم العميل تقرير إنجاز موثقًا.",
+                // Gallery / Testimonials
+                "Our Work": "أعمالنا",
+                "See Our Projects": "اطّلع على مشاريعنا",
+                "Client Feedback": "آراء العملاء",
+                "What Our Clients Say": "ماذا يقول عملاؤنا",
+                "Sky Rope's team was highly professional and efficient. They completed the facade cleaning on time and exceeded our expectations. Highly recommend their services!":
+                    "فريق سكاي روب كان احترافيًا وفعّالًا للغاية. أنجزوا تنظيف الواجهة في الوقت المحدّد وتجاوزوا توقعاتنا. ننصح بخدماتهم بشدة!",
+                "Their rope access techniques were both safe and cost-effective. The team delivered top-notch results for our facade maintenance project.":
+                    "تقنياتهم في الوصول بالحبال آمنة واقتصادية في الوقت ذاته. قدّم الفريق نتائج عالية الجودة لمشروع صيانة الواجهة لدينا.",
+                "From start to finish, the Sky Rope team provided outstanding service. Their approach to safety and quality is commendable.":
+                    "من البداية إلى النهاية، قدّم فريق سكاي روب خدمة استثنائية. نهجهم في السلامة والجودة يستحق الإشادة.",
+                "John D.": "جون د.",
+                "Rahul M.": "راهول م.",
+                "Claire S.": "كلير س.",
+                "· Property Manager": "· مدير عقارات",
+                "· Facility Manager": "· مدير منشآت",
+                "· Business Owner": "· صاحب أعمال",
+                "Property Manager": "مدير عقارات",
+                "Facility Manager": "مدير منشآت",
+                "Business Owner": "صاحب أعمال",
+                // Coverage
+                "Trusted By": "يثق بنا",
+                "Our Coverage": "نطاق تغطيتنا",
+                "Operating Across UAE & Qatar": "نعمل في الإمارات وقطر",
+                "Headquartered in Dubai Investment Park, we deploy across all seven emirates — Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, Ras Al Khaimah, and Umm Al Quwain — and are expanding into Doha, Qatar.":
+                    "مقرنا الرئيسي في مجمع دبي للاستثمار، ونعمل في الإمارات السبع — دبي، أبوظبي، الشارقة، عجمان، الفجيرة، رأس الخيمة، وأم القيوين — مع توسّع نحو الدوحة في قطر.",
+                "UAE · All Emirates": "الإمارات · جميع الإمارات",
+                "Qatar · Expanding": "قطر · قيد التوسّع",
+                // Contact
+                "Get In Touch": "تواصل معنا",
+                "Request a Free Quote": "اطلب عرض سعر مجاني",
+                "Have a project in mind? Reach out and our team will respond within 24 hours.":
+                    "هل لديك مشروع؟ تواصل معنا وسيردّ فريقنا خلال 24 ساعة.",
+                "Phone": "الهاتف",
+                "Email": "البريد الإلكتروني",
+                "Office": "المكتب",
+                "Office No. 106-02, Multiline 6, Arjuman Building, Near DIP Metro Station, DIP 1, Dubai, UAE":
+                    "مكتب رقم 106-02، ملتيلاين 6، مبنى أرجمان، بالقرب من محطة مترو DIP، مجمع دبي للاستثمار 1، دبي، الإمارات",
+                "Working Hours": "ساعات العمل",
+                "Chat on WhatsApp": "تواصل عبر واتساب",
+                "Full Name": "الاسم الكامل",
+                "Email Address": "البريد الإلكتروني",
+                "Phone / WhatsApp": "الهاتف / واتساب",
+                "Company Name": "اسم الشركة",
+                "Service Required": "الخدمة المطلوبة",
+                "Your Message": "رسالتك",
+                "Send Enquiry": "أرسل الاستفسار",
+                "— Select a service —": "— اختر خدمة —",
+                "Please enter your name": "يرجى إدخال اسمك",
+                "Please enter a valid email": "يرجى إدخال بريد إلكتروني صحيح",
+                "Please enter a valid phone": "يرجى إدخال رقم هاتف صحيح",
+                "Please enter a message": "يرجى إدخال رسالة",
+                "Please select a service": "يرجى اختيار خدمة",
+                "Enquiry Received": "تم استلام استفسارك",
+                "Your enquiry has been sent. We'll respond within 24 hours.": "تم إرسال استفسارك. سنردّ خلال 24 ساعة.",
+                // Footer
+                "UAE's leading IRATA-certified rope access and facade maintenance specialists. Access the inaccessible — safely, precisely, every time.":
+                    "نحن المتخصصون الرائدون في الإمارات في خدمات الوصول بالحبال المعتمدة من إيراتا وصيانة الواجهات. نصل إلى المستحيل — بأمان ودقّة في كل مرة.",
+                "Quick Links": "روابط سريعة",
+                "Facade Cleaning": "تنظيف الواجهات",
+                "Facade Maintenance": "صيانة الواجهات",
+                "Cladding Works": "أعمال الكسوة",
+                "Glass Installation": "تركيب الزجاج",
+                "© 2026 Sky Rope Technical Services LLC. All Rights Reserved.": "© 2026 سكاي روب للخدمات الفنية ذ.م.م. جميع الحقوق محفوظة.",
+                "Designed for the future. Built for height.": "مصمَّم للمستقبل. مبنيّ للارتفاعات."
+            };
+
+            // Translation walker — finds text nodes, swaps based on AR dict.
+            const textNodeStore = new WeakMap(); // node -> originalText
+            const placeholderStore = new WeakMap(); // input -> { ph, originalPh } not needed; we use dataset
+
+            const walkAndApply = (lang) => {
+                // Walk text nodes
+                const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode: (n) => {
+                        // skip text within script/style
+                        const p = n.parentElement;
+                        if (!p) return NodeFilter.FILTER_REJECT;
+                        const tag = p.tagName;
+                        if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT') return NodeFilter.FILTER_REJECT;
+                        // skip text inside animated/dynamic elements
+                        if (p.closest('.stat__value[data-count], .lightbox__counter')) return NodeFilter.FILTER_REJECT;
+                        if (!n.textContent.trim()) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+                const nodes = [];
+                let cur;
+                while ((cur = w.nextNode())) nodes.push(cur);
+
+                nodes.forEach(node => {
+                    // remember the original
+                    if (!textNodeStore.has(node)) textNodeStore.set(node, node.textContent);
+                    const original = textNodeStore.get(node);
+                    // collapse internal whitespace (newlines/indentation) for dict lookup
+                    const key = original.replace(/\s+/g, ' ').trim();
+                    if (lang === 'ar' && AR[key]) {
+                        // preserve leading/trailing whitespace from the original
+                        const leading = original.match(/^\s*/)[0];
+                        const trailing = original.match(/\s*$/)[0];
+                        node.textContent = leading + AR[key] + trailing;
+                    } else {
+                        node.textContent = original;
+                    }
+                });
+
+                // Translate <option> elements via value text
+                document.querySelectorAll('option').forEach(opt => {
+                    if (!opt.dataset.originalText) opt.dataset.originalText = opt.textContent;
+                    const orig = opt.dataset.originalText.trim();
+                    if (lang === 'ar' && AR[orig]) opt.textContent = AR[orig];
+                    else opt.textContent = opt.dataset.originalText;
+                });
+
+                // Translate placeholders / aria-labels if any (none currently used heavily)
+                // Translate input/textarea labels handled via text-node walk above.
+
+                // Translate stat__value text-form values (non-numeric)
+                document.querySelectorAll('.stat__value--text').forEach(el => {
+                    if (!el.dataset.originalText) el.dataset.originalText = el.textContent;
+                    // these are like "IRATA" and "UAE+QA"; keep them as is
+                    el.textContent = el.dataset.originalText;
+                });
+
+                // Document direction + lang
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+                // Update switcher label
+                const langLabel = document.querySelector('.switcher__lang-label');
+                if (langLabel) langLabel.textContent = lang === 'ar' ? 'AR' : 'EN';
+                document.querySelectorAll('#lang-switcher .switcher__item').forEach(it => {
+                    it.classList.toggle('is-current', it.dataset.lang === lang);
+                });
+
+                try { localStorage.setItem('srts.lang', lang); } catch (e) {}
+            };
+
+            // Wire language switcher buttons
+            document.querySelectorAll('#lang-switcher .switcher__item').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    walkAndApply(btn.dataset.lang);
+                    btn.closest('.switcher').classList.remove('is-open');
+                });
+            });
+
+            // Init lang from storage or browser preference
+            let initialLang = 'en';
+            try {
+                const saved = localStorage.getItem('srts.lang');
+                if (saved === 'ar' || saved === 'en') initialLang = saved;
+                else if (navigator.language && navigator.language.toLowerCase().startsWith('ar')) initialLang = 'ar';
+            } catch (e) {}
+            if (initialLang === 'ar') walkAndApply('ar');
+        })();
+    </script>
+</body>
+</html>

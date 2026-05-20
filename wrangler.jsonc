@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "skyrope-website",
+  "compatibility_date": "2026-05-20",
+  "main": "_worker.js",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "exclude": [
+      ".git/**",
+      ".wrangler/**",
+      "node_modules/**",
+      "_worker.js",
+      "wrangler.jsonc",
+      "schema.sql",
+      "DEPLOYMENT.md",
+      "functions/**"
+    ]
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "skyrope",
+      "database_id": "e5fabb35-4907-4a9d-a316-9ce1954164ec"
+    }
+  ]
+}

@@ -62,7 +62,7 @@ export async function onRequestPost({ request, env }) {
 
     // ----- D1 insert -----
     try {
-        await env.DB.prepare(`
+        const leadResult = await env.DB.prepare(`
             INSERT INTO leads
               (name, email, phone, company, service, message, source, status, created_at)
             VALUES (?, ?, ?, ?, ?, ?, ?, 'new', ?)
@@ -76,6 +76,16 @@ export async function onRequestPost({ request, env }) {
             source,
             createdAt
         ).run();
+
+        // Auto-assign to pipeline: Stage = New Inquiry (1), Status = New (1)
+        const leadId = leadResult.meta?.last_row_id;
+        if (leadId) {
+            await env.DB.prepare(`
+                INSERT OR IGNORE INTO lead_pipeline
+                  (lead_id, stage_id, status_id, updated_at, created_at)
+                VALUES (?, 1, 1, datetime('now'), datetime('now'))
+            `).bind(leadId).run();
+        }
     } catch (err) {
         console.error('D1 insert failed:', err && err.message ? err.message : err);
         return json({ error: 'Failed to process' }, 500);

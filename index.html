@@ -1435,6 +1435,36 @@
         }
         .clients__logo:hover { filter: grayscale(0) brightness(1) opacity(1); }
         html[dir="rtl"] .clients__track { animation-direction: reverse; }
+
+        /* ===== Hero rope animation overlay ===== */
+        .hero .hero__inner .hero__label { display: none; }
+        .hero-badge-right {
+            position: absolute;
+            right: 6%;
+            top: 22%;
+            transform: translateY(-50%);
+            z-index: 20;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            color: #009a8e;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.20);
+            border-radius: 100px;
+            background: rgba(0,0,0,0.35);
+            backdrop-filter: blur(10px);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        html[dir="rtl"] .hero-badge-right { right: auto; left: 6%; }
+        .hero__inner { padding: 70px 0 240px; }
+        @media (max-width: 1200px) { .hero-badge-right { top: 16%; right: 4%; font-size: 0.72rem; padding: 7px 14px; } }
+        @media (max-width: 900px) { .hero-badge-right { display: none; } }
     </style>
     <!-- Hero image preload -->
     <link rel="preload" as="image" href="uploads/facad_burjghaleefa.jpg">
@@ -1453,7 +1483,7 @@
             <div class="topbar__right">
                 <div class="topbar__contact">
                     <a href="tel:+971509370359"><i class="fa-solid fa-phone"></i>+971 509 370 359</a>
-                    <a href="mailto:sales@skyropetechnical.com"><i class="fa-regular fa-envelope"></i>sales@skyropetechnical.com</a>
+                    <a href="/cdn-cgi/l/email-protection#7d0e1c11180e3d0e16040f120d1809181e1513141e1c11531e1210"><i class="fa-regular fa-envelope"></i><span class="__cf_email__" data-cfemail="b6c5d7dad3c5f6c5ddcfc4d9c6d3c2d3d5ded8dfd5d7da98d5d9db">[email&#160;protected]</span></a>
                 </div>
                 <!-- Region switcher -->
                 <div class="switcher" id="region-switcher">
@@ -1549,7 +1579,9 @@
          HERO
          ============================================ -->
     <section class="hero" id="home">
+        <canvas id="rope-canvas" aria-hidden="true" style="position:absolute;left:0;top:0;width:62%;height:100%;z-index:1;pointer-events:none;display:block;"></canvas>
         <div class="hero__overlay"></div>
+        <div class="hero-badge-right" aria-label="IRATA Certified · UAE Based · Safety First"><i class="fa-solid fa-shield-halved"></i> IRATA Certified &middot; UAE Based &middot; Safety First</div>
         <div class="container">
             <div class="hero__inner">
                 <span class="hero__label reveal" style="--i:0">
@@ -1972,7 +2004,7 @@
                         <div class="contact-card__icon"><i class="fa-regular fa-envelope"></i></div>
                         <div class="contact-card__body">
                             <h4>Email</h4>
-                            <a href="mailto:sales@skyropetechnical.com">sales@skyropetechnical.com</a>
+                            <a href="/cdn-cgi/l/email-protection#addeccc1c8deeddec6d4dfc2ddc8d9c8cec5c3c4ceccc183cec2c0"><span class="__cf_email__" data-cfemail="b1c2d0ddd4c2f1c2dac8c3dec1d4c5d4d2d9dfd8d2d0dd9fd2dedc">[email&#160;protected]</span></a>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -2113,7 +2145,7 @@
     <!-- ============================================
          JSON-LD Schema
          ============================================ -->
-    <script type="application/ld+json">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -2765,6 +2797,167 @@
             } catch (e) {}
             if (initialLang === 'ar') walkAndApply('ar');
         })();
+    </script>
+
+    <!-- ROPE ACCESS ANIMATION — left building facade -->
+    <script>
+    (function () {
+        var cv = document.getElementById('rope-canvas');
+        if (!cv) return;
+        function checkMobile() { cv.style.display = window.innerWidth <= 768 ? 'none' : 'block'; }
+        checkMobile();
+        window.addEventListener('resize', function(){ checkMobile(); resize(); });
+        var ctx = cv.getContext('2d'), T = 0;
+
+        // Load technician silhouette + cache a keyed/tinted version so it reads
+        // against the dark hero background. The source PNG has its background
+        // baked in as opaque pixels (a checkerboard), not alpha — we key it out
+        // by luminance below.
+        var techImg = new Image();
+        techImg.crossOrigin = 'anonymous';
+        var techReady = false, tintedTech = null;
+        techImg.onload = function () {
+            techReady = true;
+            try {
+                var off = document.createElement('canvas');
+                off.width = techImg.naturalWidth;
+                off.height = techImg.naturalHeight;
+                var octx = off.getContext('2d');
+                octx.drawImage(techImg, 0, 0);
+                var imgData = octx.getImageData(0, 0, off.width, off.height);
+                var d = imgData.data;
+                var THRESH = 110;
+                for (var p = 0; p < d.length; p += 4) {
+                    var lum = 0.299 * d[p] + 0.587 * d[p+1] + 0.114 * d[p+2];
+                    if (lum > THRESH) {
+                        d[p+3] = 0;
+                    } else {
+                        var k = 1 - lum / THRESH;
+                        d[p]   = 235;
+                        d[p+1] = 240;
+                        d[p+2] = 245;
+                        d[p+3] = Math.min(255, Math.round(255 * (0.55 + 0.4 * k)));
+                    }
+                }
+                octx.putImageData(imgData, 0, 0);
+                tintedTech = off;
+            } catch (e) { tintedTech = null; }
+        };
+        techImg.onerror = function () { techReady = false; };
+        techImg.src = 'uploads/rope_access_technician.png';
+
+        function resize() {
+            var r = cv.getBoundingClientRect();
+            cv.width  = Math.round(r.width);
+            cv.height = Math.round(r.height);
+        }
+        resize();
+
+        var RX = [0.06, 0.20, 0.36, 0.52, 0.68, 0.84];
+
+        function ropeX(ri, yf) {
+            var amp  = 3 + (ri % 3) * 1.5;
+            var freq = 0.0005 + ri * 0.00018;
+            return RX[ri] * cv.width + Math.sin(T * freq + ri * 1.3 + yf * 2.8) * amp;
+        }
+
+        var techs = [
+            {ri:0, p:0.12, spd:0.0014},
+            {ri:1, p:0.42, spd:0.0017},
+            {ri:2, p:0.08, spd:0.0020},
+            {ri:2, p:0.65, spd:0.0015},
+            {ri:3, p:0.28, spd:0.0013},
+            {ri:4, p:0.55, spd:0.0018},
+            {ri:4, p:0.18, spd:0.0016},
+            {ri:5, p:0.38, spd:0.0019}
+        ];
+
+        function drawFacade() {
+            var w = cv.width, h = cv.height;
+            ctx.save();
+            ctx.strokeStyle = 'rgba(255,255,255,0.038)';
+            ctx.lineWidth = 0.5; ctx.setLineDash([]);
+            for (var c = 0; c <= 6; c++) {
+                ctx.beginPath(); ctx.moveTo(c*w/6,0); ctx.lineTo(c*w/6,h); ctx.stroke();
+            }
+            for (var r = 1; r <= 8; r++) {
+                ctx.beginPath(); ctx.moveTo(0,r*h/8); ctx.lineTo(w,r*h/8); ctx.stroke();
+            }
+            ctx.restore();
+        }
+
+        function drawRopes() {
+            var h = cv.height, S = 80;
+            for (var i = 0; i < RX.length; i++) {
+                ctx.save();
+                ctx.beginPath(); ctx.moveTo(ropeX(i,0), 0);
+                for (var s=1;s<=S;s++){var yf=s/S;ctx.lineTo(ropeX(i,yf),yf*h);}
+                ctx.strokeStyle='rgba(255,255,255,0.26)'; ctx.lineWidth=0.8; ctx.setLineDash([]); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(ropeX(i,0), 0);
+                for (var s2=1;s2<=S;s2++){var f2=s2/S;ctx.lineTo(ropeX(i,f2),f2*h);}
+                ctx.strokeStyle='rgba(255,255,255,0.055)'; ctx.lineWidth=3; ctx.setLineDash([3,11]); ctx.stroke();
+                ctx.restore();
+            }
+        }
+
+        function drawTraverse() {
+            var h = cv.height;
+            [[0,1],[2,3],[4,5]].forEach(function(pr,idx){
+                var yf = 0.34 + Math.sin(T*0.00028+idx*0.9)*0.03;
+                var ax=ropeX(pr[0],yf), bx=ropeX(pr[1],yf), y=yf*h;
+                ctx.save();
+                ctx.beginPath(); ctx.moveTo(ax,y); ctx.lineTo(bx,y);
+                ctx.strokeStyle='rgba(255,255,255,0.09)'; ctx.lineWidth=0.5; ctx.setLineDash([3,8]); ctx.stroke();
+                ctx.restore();
+            });
+        }
+
+        var TECH_W = 32, TECH_H = 32;
+
+        function drawTechs() {
+            var h = cv.height;
+            var img = tintedTech || (techReady ? techImg : null);
+            techs.forEach(function(tc, i){
+                tc.p += tc.spd;
+                if (tc.p > 1.04) tc.p = 0.01;
+                var yf=tc.p, tx=ropeX(tc.ri,yf), ty=yf*h;
+                var eyf=Math.min(tc.p+0.055,1.0), ex=ropeX(tc.ri,eyf), ey=eyf*h;
+
+                ctx.save();
+                ctx.beginPath(); ctx.moveTo(tx,ty+TECH_H*0.35); ctx.lineTo(ex,ey-3);
+                ctx.strokeStyle='rgba(255,255,255,0.14)'; ctx.lineWidth=0.5; ctx.setLineDash([2,4]); ctx.stroke();
+                ctx.restore();
+
+                ctx.save();
+                ctx.beginPath(); ctx.arc(ex,ey,3.5,0,Math.PI*2);
+                ctx.fillStyle='rgba(148,148,148,0.48)'; ctx.fill();
+                ctx.restore();
+
+                if (img) {
+                    ctx.save();
+                    var sway = Math.sin(T * 0.004 + i * 0.7) * 0.12;
+                    ctx.translate(tx, ty);
+                    ctx.rotate(sway);
+                    ctx.drawImage(img, -TECH_W/2, -TECH_H*0.4, TECH_W, TECH_H);
+                    ctx.restore();
+                } else {
+                    ctx.save();
+                    ctx.beginPath(); ctx.arc(tx,ty,5,0,Math.PI*2);
+                    ctx.fillStyle='rgba(225,225,225,0.55)'; ctx.fill();
+                    ctx.restore();
+                }
+            });
+        }
+
+        function frame() {
+            if(cv.width===0||cv.height===0) resize();
+            ctx.clearRect(0,0,cv.width,cv.height);
+            T++;
+            drawFacade(); drawRopes(); drawTraverse(); drawTechs();
+            requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+    })();
     </script>
 </body>
 </html>

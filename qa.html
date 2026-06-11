@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Rope Technical Services | Qatar — Coming Soon</title>
+    <link rel="canonical" href="https://qa.skyropetechnical.com/">
+    <link href="uploads/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="uploads/skyrope-logo.webp" rel="icon" type="image/webp">
+    
+    <!-- Retain existing stylesheet paths from your main project -->
+    <link rel="stylesheet" href="css/style.css"> 
+
+    <style>
+        /* Concept Styles: Descending Soon Animation */
+        .qatar-hero {
+            position: relative;
+            background: linear-gradient(135deg, #11141a 0%, #1a202c 100%);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .rope-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 2;
+        }
+
+        .technician-anim {
+            position: absolute;
+            top: -100px;
+            left: -23px;
+            width: 50px;
+            height: 50px;
+            background: #ff5722; /* Primary corporate accent color */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.6);
+            animation: descendAnchor 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .technician-anim svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        .teaser-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out 3s forwards;
+        }
+
+        .teaser-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(255, 87, 34, 0.15);
+            border: 1px solid #ff5722;
+            color: #ff5722;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .teaser-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .teaser-content h1 span {
+            color: #ff5722;
+        }
+
+        .teaser-content p {
+            font-size: 1.15rem;
+            color: #a0aec0;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #ff5722;
+            color: #fff;
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #e04e1b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Keyframe Animations */
+        @keyframes descendAnchor {
+            0% { top: -100px; }
+            70% { top: 35%; }
+            85% { top: 30%; }
+            100% { top: 32%; }
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .teaser-content h1 { font-size: 2.5rem; }
+            .cta-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>Mon–Sat 9:00 AM – 6:00 PM</span>
+                <a href="tel:+971509370359">+971 509 370 359</a>
+            </div>
+            <div class="regional-selector">
+                <div role="menu">
+                    <a href="https://skyropetechnical.com" role="menuitem">United Arab Emirates</a>
+                    <a href="#" role="menuitem" class="active">Qatar (Launching)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a aria-label="Sky Rope Home" href="/">
+                <img alt="Sky Rope Technical Services" src="uploads/skyrope-logo.webp" style="height:50px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#safety">Safety</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="mailto:info@skyropetechnical.com" class="btn-quote">Pre-Ops Enquiry</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Innovative Coming Soon Hero Section -->
+    <section class="qatar-hero">
+        <div class="rope-container">
+            <!-- Rope access technician descending asset icon -->
+            <div class="technician-anim">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,2A2,2 0 0,0 10,4A2,2 0 0,0 12,6A2,2 0 0,0 14,4A2,2 0 0,0 12,2M10.5,7C8.57,7 7,8.57 7,10.5V16.5H9V22H11V17H13V22H15V16.5H17V10.5C17,8.57 15.43,7 13.5,7H10.5Z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="teaser-content">
+            <div class="teaser-badge">Expanding Operations</div>
+            <h1>Accessing The Inaccessible<br><span>In Doha, Qatar</span></h1>
+            <p>
+                Sky Rope Technical Services is rigging up for expansion. Our IRATA-certified team is bringing world-class high-rise facade cleaning, technical rope maintenance, and structural assets management solutions to Qatar's skyline.
+            </p>
+            <div class="cta-group">
+                <a href="mailto:info@skyropetechnical.com?subject=Qatar Regional Operations Inquiry" class="btn-primary">Secure Pre-Launch Rates</a>
+                <a href="https://wa.me/971509243325" rel="noopener" target="_blank" class="btn-secondary">Speak with Operations Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standard Footer Section to close the page seamlessly -->
+    <footer>
+        <div class="container" style="text-align: center; padding: 40px 20px; color: #718096; font-size: 0.9rem;">
+            <p>&copy; 2026 Sky Rope Technical Services. All Rights Reserved. IRATA Certified Regional Operations.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

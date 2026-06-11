@@ -239,13 +239,36 @@
         footer {
             position: relative;
             z-index: 2;
-            text-align: center;
-            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+            padding-right: 80px; /* space for WhatsApp FAB */
             border-top: 1px solid rgba(255,255,255,0.06);
             font-size: 0.75rem;
             color: rgba(255,255,255,0.3);
         }
         footer a { color: var(--teal); text-decoration: none; }
+        .footer-copy { flex: 1; }
+
+        /* ── Real Plannet badge ── */
+        .rp-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            text-decoration: none; color: inherit;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(201,168,76,0.25);
+            border-radius: 40px;
+            padding: 5px 12px 5px 5px;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .rp-badge:hover { background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.5); }
+        .rp-badge-orb svg { width: 28px; height: 28px; display: block; }
+        .rp-badge-text { display: flex; flex-direction: column; line-height: 1.2; }
+        .rp-badge-text span:first-child { font-size: 0.6rem; opacity: 0.5; letter-spacing: 0.05em; text-transform: uppercase; }
+        .rp-badge-text span:last-child  { font-size: 0.75rem; font-weight: 600; color: #c9a84c; }
+        .rp-badge-text em { font-style: italic; }
 
         /* ── Qatar flag accent strip ── */
         .qatar-accent {
@@ -329,9 +352,25 @@
 </section>
 
 <footer>
-    © 2026 Sky Rope Technical Services LLC &nbsp;|&nbsp;
-    <a href="https://skyropetechnical.com">skyropetechnical.com</a> &nbsp;|&nbsp;
-    UAE: <a href="tel:+971509243325">+971 509 243 325</a>
+    <div class="footer-copy">
+        © 2026 Sky Rope Technical Services LLC &nbsp;|&nbsp;
+        <a href="https://skyrope-website.skyropetechnical.workers.dev">skyropetechnical.com</a> &nbsp;|&nbsp;
+        UAE: <a href="tel:+971509243325">+971 509 243 325</a>
+    </div>
+    <a href="https://realplannet.com" class="rp-badge" target="_blank" rel="noopener" title="Built by Real Plannet">
+        <div class="rp-badge-orb">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                <defs><linearGradient id="rpBG" x1="20" y1="16" x2="44" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#e8c97a"/><stop offset="1" stop-color="#c9a84c"/></linearGradient></defs>
+                <ellipse cx="32" cy="33" rx="27" ry="9.5" transform="rotate(-20 32 33)" stroke="#c9a84c" stroke-width="1.4" opacity="0.45"/>
+                <circle cx="32" cy="30" r="13" fill="url(#rpBG)"/>
+                <path d="M5.5 38 A27 9.5 0 0 0 58.5 28" transform="rotate(-20 32 33)" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
+            </svg>
+        </div>
+        <div class="rp-badge-text">
+            <span>Built by</span>
+            <span>Real <em>Plannet</em></span>
+        </div>
+    </a>
 </footer>
 
 </body>

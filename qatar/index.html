@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Rope Technical Services — Qatar | Coming Soon</title>
+    <meta name="description" content="Sky Rope Technical Services is expanding to Doha, Qatar. IRATA-certified high-rise facade cleaning, rope access maintenance and structural asset management.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --teal: #009E9A;
+            --blue: #214570;
+            --gold: #FCA62D;
+            --dark: #0a1628;
+            --light: #f4f8fb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            overflow: hidden;
+        }
+
+        /* Animated background grid */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(0,158,154,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,158,154,0.06) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0%   { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+
+        /* Glow orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.18;
+            pointer-events: none;
+        }
+        .orb-1 { width: 500px; height: 500px; background: var(--teal); top: -100px; right: -100px; }
+        .orb-2 { width: 400px; height: 400px; background: var(--blue);  bottom: -80px; left: -80px; }
+        .orb-3 { width: 300px; height: 300px; background: var(--gold);  top: 40%;  left: 50%; transform: translateX(-50%); opacity: 0.08; }
+
+        /* Rope line decoration */
+        .rope-line {
+            position: absolute;
+            top: 0; left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--teal), transparent);
+            opacity: 0.15;
+            transform: translateX(-50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+        }
+
+        /* Logo */
+        .logo-wrap {
+            margin-bottom: 2.5rem;
+        }
+        .logo-wrap img {
+            height: 56px;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Badge */
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,158,154,0.12);
+            border: 1px solid rgba(0,158,154,0.35);
+            border-radius: 100px;
+            padding: 6px 18px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 1.8rem;
+        }
+        .badge-pill .dot {
+            width: 7px; height: 7px;
+            background: var(--teal);
+            border-radius: 50%;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        /* Headline */
+        .headline {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+        .headline .accent { color: var(--teal); }
+        .headline .city   { color: var(--gold); }
+
+        /* Sub */
+        .subline {
+            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            font-weight: 300;
+            color: rgba(255,255,255,0.65);
+            max-width: 560px;
+            margin: 0 auto 2.8rem;
+            line-height: 1.6;
+        }
+
+        /* Divider rope */
+        .rope-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 2.8rem;
+        }
+        .rope-divider span { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+        .rope-divider::before,
+        .rope-divider::after {
+            content: '';
+            flex: 1;
+            max-width: 120px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,158,154,0.5));
+        }
+        .rope-divider::after { background: linear-gradient(to left, transparent, rgba(0,158,154,0.5)); }
+
+        /* Pills / services */
+        .services-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .pill {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.75);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .pill .icon { color: var(--teal); font-size: 0.9rem; }
+
+        /* CTAs */
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .btn-primary-sr {
+            background: var(--teal);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary-sr:hover { background: #007f7c; transform: translateY(-2px); }
+
+        .btn-outline-sr {
+            background: transparent;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: border-color 0.2s, transform 0.15s, background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-outline-sr:hover { border-color: var(--teal); background: rgba(0,158,154,0.08); transform: translateY(-2px); }
+
+        /* Stats strip */
+        .stats-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .stat { text-align: center; }
+        .stat .num  { font-size: 1.8rem; font-weight: 900; color: var(--teal); }
+        .stat .lbl  { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 2px; }
+
+        /* ── BOTTOM BAR ── */
+        footer {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 1.2rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+        }
+        footer a { color: var(--teal); text-decoration: none; }
+
+        /* ── Qatar flag accent strip ── */
+        .qatar-accent {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(to right, #8D1B3D 0%, #8D1B3D 38%, #fff 38%, #fff 100%);
+            opacity: 0.4;
+        }
+
+        @media (max-width: 480px) {
+            .cta-group { flex-direction: column; align-items: center; }
+            .btn-primary-sr, .btn-outline-sr { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="rope-line"></div>
+
+    <div class="hero-content">
+
+        <!-- Logo -->
+        <div class="logo-wrap">
+            <img src="/uploads/skyrope-logo.webp" alt="Sky Rope Technical Services" onerror="this.style.display='none'; document.querySelector('.logo-text').style.display='block'">
+            <div class="logo-text" style="display:none; font-size:1.4rem; font-weight:800; letter-spacing:0.04em;">SKY<span style="color:var(--teal)">ROPE</span></div>
+        </div>
+
+        <!-- Badge -->
+        <div class="badge-pill">
+            <span class="dot"></span>
+            Expanding Operations · Coming Soon
+        </div>
+
+        <!-- Headline -->
+        <h1 class="headline">
+            Accessing The Inaccessible<br>
+            In <span class="city">Doha, Qatar</span>
+        </h1>
+
+        <!-- Sub -->
+        <p class="subline">
+            Sky Rope Technical Services is rigging up for expansion. Our IRATA-certified team is bringing world-class high-rise facade cleaning, technical rope maintenance, and structural asset management to Qatar's skyline.
+        </p>
+
+        <!-- Rope divider -->
+        <div class="rope-divider"><span>Services Landing</span></div>
+
+        <!-- Service pills -->
+        <div class="services-pills">
+            <div class="pill"><span class="icon">⬡</span> High-Rise Facade Cleaning</div>
+            <div class="pill"><span class="icon">⬡</span> Technical Rope Maintenance</div>
+            <div class="pill"><span class="icon">⬡</span> Structural Asset Management</div>
+            <div class="pill"><span class="icon">⬡</span> IRATA-Certified Access</div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="cta-group">
+            <a href="mailto:info@skyropetechnical.com?subject=Qatar Regional Operations Inquiry" class="btn-primary-sr">
+                ✉ Secure Pre-Launch Rates
+            </a>
+            <a href="https://wa.me/971509243325" class="btn-outline-sr" target="_blank" rel="noopener">
+                💬 Speak with Operations Team
+            </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-strip">
+            <div class="stat"><div class="num">IRATA</div><div class="lbl">Certified Team</div></div>
+            <div class="stat"><div class="num">UAE</div><div class="lbl">Proven Track Record</div></div>
+            <div class="stat"><div class="num">QA</div><div class="lbl">Launching in Qatar</div></div>
+        </div>
+
+    </div>
+
+    <div class="qatar-accent"></div>
+</section>
+
+<footer>
+    © 2026 Sky Rope Technical Services LLC &nbsp;|&nbsp;
+    <a href="https://skyropetechnical.com">skyropetechnical.com</a> &nbsp;|&nbsp;
+    UAE: <a href="tel:+971509243325">+971 509 243 325</a>
+</footer>
+
+</body>
+</html>

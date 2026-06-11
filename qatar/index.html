@@ -257,13 +257,13 @@
         .rp-badge {
             display: inline-flex; align-items: center; gap: 8px;
             text-decoration: none; color: inherit;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(201,168,76,0.25);
+            background: transparent;
+            border: none;
             border-radius: 40px;
             padding: 5px 12px 5px 5px;
             transition: background 0.2s, border-color 0.2s;
         }
-        .rp-badge:hover { background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.5); }
+        .rp-badge:hover { opacity: 0.75; }
         .rp-badge-orb svg { width: 28px; height: 28px; display: block; }
         .rp-badge-text { display: flex; flex-direction: column; line-height: 1.2; }
         .rp-badge-text span:first-child { font-size: 0.6rem; opacity: 0.5; letter-spacing: 0.05em; text-transform: uppercase; }

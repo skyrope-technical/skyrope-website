@@ -1212,6 +1212,21 @@
             flex-wrap: wrap;
         }
         .footer__bottom .tagline { color: var(--color-primary); font-family: var(--font-accent); }
+        .rp-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            text-decoration: none; color: inherit;
+            background: transparent;
+            border: none;
+            border-radius: 40px;
+            padding: 4px 8px 4px 4px;
+            transition: opacity 0.2s;
+        }
+        .rp-badge:hover { opacity: 0.75; }
+        .rp-badge-orb svg { width: 28px; height: 28px; display: block; }
+        .rp-badge-text { display: flex; flex-direction: column; line-height: 1.2; }
+        .rp-badge-text span:first-child { font-size: 0.6rem; opacity: 0.5; letter-spacing: 0.05em; text-transform: uppercase; }
+        .rp-badge-text span:last-child  { font-size: 0.75rem; font-weight: 600; color: #c9a84c; }
+        .rp-badge-text em { font-style: italic; }
 
         /* =====================================================
            FLOATING BUTTONS
@@ -2141,7 +2156,20 @@
             </div>
             <div class="footer__bottom">
                 <div>© 2026 Sky Rope Technical Services LLC. All Rights Reserved.</div>
-                <div class="tagline">Designed for the future. Built for height.</div>
+                <a href="https://realplannet.com" class="rp-badge" target="_blank" rel="noopener" title="Built by Real Plannet">
+                    <div class="rp-badge-orb">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                            <defs><linearGradient id="rpBG" x1="20" y1="16" x2="44" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#e8c97a"/><stop offset="1" stop-color="#c9a84c"/></linearGradient></defs>
+                            <ellipse cx="32" cy="33" rx="27" ry="9.5" transform="rotate(-20 32 33)" stroke="#c9a84c" stroke-width="1.4" opacity="0.45"/>
+                            <circle cx="32" cy="30" r="13" fill="url(#rpBG)"/>
+                            <path d="M5.5 38 A27 9.5 0 0 0 58.5 28" transform="rotate(-20 32 33)" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="rp-badge-text">
+                        <span>Built by</span>
+                        <span>Real <em>Plannet</em></span>
+                    </div>
+                </a>
             </div>
         </div>
     </footer>
